@@ -1,1 +1,3 @@
-  # This is a README
+  # Homework PKM1: Pokemon Class
+  
+  
