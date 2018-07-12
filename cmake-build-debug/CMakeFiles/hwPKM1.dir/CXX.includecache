@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/joelg/CLionProjects/hwPKM1/main.cpp
+cstdlib
+-
+iostream
+-
+pokemon.h
+C:/Users/joelg/CLionProjects/hwPKM1/pokemon.h
+
+C:/Users/joelg/CLionProjects/hwPKM1/pokemon.h
+string
+-
+
