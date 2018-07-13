@@ -87,7 +87,7 @@ float Pokemon::damage_multiplier(Pokemon::Type attack_type) {
             else if (attack_type == Poison)
                 damage_res = 1;
         }
-            // If Fighting
+        // If Fighting
         else if (type1() == Fighting) {
             if (attack_type == Normal)
                 damage_res = 1;
@@ -98,7 +98,7 @@ float Pokemon::damage_multiplier(Pokemon::Type attack_type) {
             else if (attack_type == Poison)
                 damage_res = 1;
         }
-            // If Flying
+        // If Flying
         else if (type1() == Flying) {
             if (attack_type == Normal)
                 damage_res = 1;
@@ -109,7 +109,7 @@ float Pokemon::damage_multiplier(Pokemon::Type attack_type) {
             else if (attack_type == Poison)
                 damage_res = 1;
         }
-            // If Poison
+        // If Poison
         else if (type1() == Poison) {
             if (attack_type == Normal)
                 damage_res = 1;
@@ -133,7 +133,7 @@ float Pokemon::damage_multiplier(Pokemon::Type attack_type) {
             else if (attack_type == Poison)
                 damage_res = 1 * 1;
         }
-            // If Poison and Flying
+        // If Poison and Flying
         else if (type1() == Poison && type2() == Flying) {
             if (attack_type == Normal)
                 damage_res = 1 * 1;
@@ -144,7 +144,7 @@ float Pokemon::damage_multiplier(Pokemon::Type attack_type) {
             else if (attack_type == Poison)
                 damage_res = 1 * 0.5f;
         }
-            // If Poison and Fighting
+        // If Poison and Fighting
         else if (type1() == Poison && type2() == Fighting) {
             if (attack_type == Normal)
                 damage_res = 1 * 1;
@@ -155,7 +155,7 @@ float Pokemon::damage_multiplier(Pokemon::Type attack_type) {
             else if (attack_type == Poison)
                 damage_res = 1 * 0.5f;
         }
-            // If Fighting and Flying
+        // If Fighting and Flying
         else if (type1() == Fighting && type2() == Flying) {
             if (attack_type == Normal)
                 damage_res = 1 * 1;
@@ -166,7 +166,7 @@ float Pokemon::damage_multiplier(Pokemon::Type attack_type) {
             else if (attack_type == Poison)
                 damage_res = 1 * 1;
         }
-            // If Flying and Normal
+        // If Flying and Normal
         else if (type1() == Flying && type2() == Normal) {
             if (attack_type == Normal)
                 damage_res = 1 * 1;
