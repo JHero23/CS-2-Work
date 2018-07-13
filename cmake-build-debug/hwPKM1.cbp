@@ -85,6 +85,12 @@
 		<Unit filename="C:/Users/joelg/CLionProjects/hwPKM1/main.cpp">
 			<Option target="hwPKM1"/>
 		</Unit>
+		<Unit filename="C:/Users/joelg/CLionProjects/hwPKM1/pokemon.cpp">
+			<Option target="hwPKM1"/>
+		</Unit>
+		<Unit filename="C:/Users/joelg/CLionProjects/hwPKM1/pokemon.h">
+			<Option target="hwPKM1"/>
+		</Unit>
 		<Unit filename="C:/Users/joelg/CLionProjects/hwPKM1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

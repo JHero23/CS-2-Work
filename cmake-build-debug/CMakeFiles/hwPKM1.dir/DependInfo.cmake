@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/joelg/CLionProjects/hwPKM1/main.cpp" "C:/Users/joelg/CLionProjects/hwPKM1/cmake-build-debug/CMakeFiles/hwPKM1.dir/main.cpp.obj"
+  "C:/Users/joelg/CLionProjects/hwPKM1/pokemon.cpp" "C:/Users/joelg/CLionProjects/hwPKM1/cmake-build-debug/CMakeFiles/hwPKM1.dir/pokemon.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

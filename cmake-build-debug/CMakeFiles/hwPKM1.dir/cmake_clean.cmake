@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/hwPKM1.dir/main.cpp.obj"
+  "CMakeFiles/hwPKM1.dir/pokemon.cpp.obj"
   "hwPKM1.pdb"
   "hwPKM1.exe"
   "hwPKM1.exe.manifest"
