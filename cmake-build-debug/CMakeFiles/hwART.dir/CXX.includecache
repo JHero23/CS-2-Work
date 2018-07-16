@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/joelg/CLionProjects/hwART/canvas.cpp
+canvas.h
+C:/Users/joelg/CLionProjects/hwART/canvas.h
+
+C:/Users/joelg/CLionProjects/hwART/canvas.h
+string
+-
+
+C:/Users/joelg/CLionProjects/hwART/main.cpp
+string
+-
+cstdlib
+-
+iostream
+-
+canvas.h
+C:/Users/joelg/CLionProjects/hwART/canvas.h
+
