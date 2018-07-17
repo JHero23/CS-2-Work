@@ -4,7 +4,7 @@ file(REMOVE_RECURSE
   "hwART.pdb"
   "hwART.exe"
   "hwART.exe.manifest"
-  "libhwART.dll.a"
+  "hwART.lib"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -10,7 +10,6 @@ using namespace std;
 // consists entirely of ' ' (space) chars.
 Canvas::Canvas(int width) {
     _width = width;
-    char temp = ' ';
 
     C = new char*[_width];
 
@@ -19,7 +18,9 @@ Canvas::Canvas(int width) {
     }
 
     for (int i = 0; i < _width; i++) {
-       C[i] = &temp;
+       for (int j = 0; j < _width; j++) {
+           C[i][j] = ' ';
+       }
     }
 }
 
@@ -35,7 +36,6 @@ Canvas::Canvas(int width) {
 // given as a parameter. If some other character is given,
 // allocates a canvas of ' ' chars with width 5 and height 5.
 Canvas::Canvas(char x) {
-    char temp = ' ';
 
     C = new char*[_width];
 
@@ -75,13 +75,13 @@ int Canvas::width() {
 // Returns the entire canvas as a single string, consisting of each row
 // of the canvas, followed by the newline character ('\n').
 string Canvas::to_string() {
-    string s;
+    string s = "hi";
 
     for (int i = 0; i < width(); i++) {
-        s += C[i];
+        for (int j = 0; j < width(); j++) {
+            cout << C[i][j] << endl;
+        }
     }
-
-    s += '\n';
 
     return s;
 }
