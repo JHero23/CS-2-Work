@@ -11,6 +11,7 @@ using namespace std;
 Canvas::Canvas(int width) {
     _width = width;
     char temp = ' ';
+
     C = new char*[_width];
 
     for (int i = 0; i < _width; i++) {
@@ -18,10 +19,9 @@ Canvas::Canvas(int width) {
     }
 
     for (int i = 0; i < _width; i++) {
-        C[i] = &temp;
-        for (int j = 0; j < _width; j++) {
-            C[j] = &temp;
-        }
+       for (int j = 0; j < _width; j++) {
+           C[i][j] = temp;
+       }
     }
 }
 
@@ -38,22 +38,16 @@ Canvas::Canvas(int width) {
 // allocates a canvas of ' ' chars with width 5 and height 5.
 Canvas::Canvas(char x) {
     char temp = ' ';
-    C = new char*[width()];
 
-    for (int i = 0; i < width(); i++) {
-        C[i] = new char[width()];
+    C = new char*[_width];
+
+    for (int i = 0; i < _width; i++) {
+        C[i] = new char[_width];
     }
 
-    for (int i = 0; i < width(); i++) {
-        if (x == 'A' || x == 'B' || x == 'C' || x == 'D')
-            C[i] = &x;
-        else
-            C[i] = &temp;
-        for (int j = 0; j < width(); j++) {
-            if (x == 'A' || x == 'B' || x == 'C' || x == 'D')
-                C[j] = &x;
-            else
-                C[j] = &temp;
+    for (int i = 0; i < _width; i++) {
+        for (int j = 0; j < _width; j++) {
+            C[i][j] = '#';
         }
     }
 }
@@ -72,9 +66,6 @@ Canvas::Canvas(char x) {
 // Any characters in s not from {'A', 'B', 'C', 'D'} should be
 // replaced with empty 5x5 space, just like previous constructor.
 Canvas::Canvas(string s) {
-    char* temp;
-
-    C = &temp;
 
 }
 
@@ -99,6 +90,13 @@ string Canvas::to_string() {
 // #   #           @   @
 //
 void Canvas::replace(char old_char, char new_char) {
+    for (int i = 0; i < _width; i++) {
+        for (int j = 0; j < _width; j++) {
+            if (C[i][j] == old_char) {
+                C[i][j] = new_char;
+            }
+        }
+    }
 
 }
 
