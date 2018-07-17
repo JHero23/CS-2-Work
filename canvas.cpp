@@ -19,9 +19,7 @@ Canvas::Canvas(int width) {
     }
 
     for (int i = 0; i < _width; i++) {
-       for (int j = 0; j < _width; j++) {
-           C[i][j] = temp;
-       }
+       C[i] = &temp;
     }
 }
 
@@ -77,7 +75,15 @@ int Canvas::width() {
 // Returns the entire canvas as a single string, consisting of each row
 // of the canvas, followed by the newline character ('\n').
 string Canvas::to_string() {
+    string s;
 
+    for (int i = 0; i < width(); i++) {
+        s += C[i];
+    }
+
+    s += '\n';
+
+    return s;
 }
 
 // Replaces every instance in the canvas of old_char with new_char.
