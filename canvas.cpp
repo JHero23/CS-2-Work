@@ -10,6 +10,19 @@ using namespace std;
 // consists entirely of ' ' (space) chars.
 Canvas::Canvas(int width) {
     _width = width;
+    char temp = ' ';
+    C = new char*[_width];
+
+    for (int i = 0; i < _width; i++) {
+        C[i] = new char[_width];
+    }
+
+    for (int i = 0; i < _width; i++) {
+        C[i] = &temp;
+        for (int j = 0; j < _width; j++) {
+            C[j] = &temp;
+        }
+    }
 }
 
 // Allocates a canvas with width 5 and height 5 that looks like:
@@ -59,6 +72,9 @@ Canvas::Canvas(char x) {
 // Any characters in s not from {'A', 'B', 'C', 'D'} should be
 // replaced with empty 5x5 space, just like previous constructor.
 Canvas::Canvas(string s) {
+    char* temp;
+
+    C = &temp;
 
 }
 
@@ -70,7 +86,6 @@ int Canvas::width() {
 // Returns the entire canvas as a single string, consisting of each row
 // of the canvas, followed by the newline character ('\n').
 string Canvas::to_string() {
-    string s;
 
 }
 
@@ -84,9 +99,6 @@ string Canvas::to_string() {
 // #   #           @   @
 //
 void Canvas::replace(char old_char, char new_char) {
-    char *temp;
-
-    temp = &old_char;
 
 }
 
