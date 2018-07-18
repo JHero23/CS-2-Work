@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/tpc345/CLionProjects/hwART/canvas.cpp" "C:/Users/tpc345/CLionProjects/hwART/cmake-build-debug/CMakeFiles/hwART.dir/canvas.cpp.obj"
-  "C:/Users/tpc345/CLionProjects/hwART/main.cpp" "C:/Users/tpc345/CLionProjects/hwART/cmake-build-debug/CMakeFiles/hwART.dir/main.cpp.obj"
+  "C:/Users/joelg/CLionProjects/hwART/canvas.cpp" "C:/Users/joelg/CLionProjects/hwART/cmake-build-debug/CMakeFiles/hwART.dir/canvas.cpp.obj"
+  "C:/Users/joelg/CLionProjects/hwART/main.cpp" "C:/Users/joelg/CLionProjects/hwART/cmake-build-debug/CMakeFiles/hwART.dir/main.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "MSVC")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

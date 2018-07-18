@@ -11,16 +11,16 @@ using namespace std;
 Canvas::Canvas(int width) {
     _width = width;
 
-    C = new char*[_width];
+    C = new char*[5];
 
-    for (int i = 0; i < _width; i++) {
+    for (int i = 0; i < 5; i++) {
         C[i] = new char[_width];
     }
 
-    for (int i = 0; i < _width; i++) {
-       for (int j = 0; j < _width; j++) {
-           C[i][j] = ' ';
-       }
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < _width; j++) {
+            C[i][j] = ' ';
+        }
     }
 }
 
@@ -36,6 +36,7 @@ Canvas::Canvas(int width) {
 // given as a parameter. If some other character is given,
 // allocates a canvas of ' ' chars with width 5 and height 5.
 Canvas::Canvas(char x) {
+    _width = 5;
 
     C = new char*[_width];
 
@@ -45,7 +46,54 @@ Canvas::Canvas(char x) {
 
     for (int i = 0; i < _width; i++) {
         for (int j = 0; j < _width; j++) {
-            C[i][j] = '#';
+            if (x == 'A' || x == 'B' || x == 'C' || x == 'D') {
+                if ((i == 1 || i == 2 || i == 3) && j == 0) {
+                    C[i][j] = '#';
+                }
+                if (i == 0 && (j == 1 || j == 2 || j == 3)) {
+                    C[i][j] = '#';
+                }
+            }
+            if (x == 'B' || x == 'C' || x == 'D') {
+                if (i == 4 && (j == 1 || j == 2 || j == 3)) {
+                    C[i][j] = '#';
+                }
+            }
+            if (x == 'A' || x == 'D') {
+                if ((i == 1 || i == 2 || i == 3) && j == 4) {
+                    C[i][j] = '#';
+                }
+            }
+            if (x == 'A' || x == 'B') {
+                if (i == 2 && (j == 1 || j == 2 || j == 3)) {
+                    C[i][j] == '#';
+                }
+            }
+            if (x == 'A' || x == 'B' || x == 'D') {
+                if (i == 4 && j == 0) {
+                    C[i][j] = '#';
+                }
+            }
+            if (x == 'B' || x == 'D') {
+                if (i == 0 && j == 0) {
+                    C[i][j] = '#';
+                }
+            }
+            if (x == 'A' || x == 'C') {
+                if (i == 4 && j == 4) {
+                    C[i][j] = '#';
+                }
+            }
+            if (x == 'C') {
+                if (i == 0 && j == 4) {
+                    C[i][j] = '#';
+                }
+            }
+            if (x == 'B') {
+                if ((i == 1 || i == 3) && j == 4) {
+                    C[i][j] = '#';
+                }
+            }
         }
     }
 }
@@ -75,12 +123,13 @@ int Canvas::width() {
 // Returns the entire canvas as a single string, consisting of each row
 // of the canvas, followed by the newline character ('\n').
 string Canvas::to_string() {
-    string s = "hi";
+    string s = "";
 
-    for (int i = 0; i < width(); i++) {
+    for (int i = 0; i < 5; i++) {
         for (int j = 0; j < width(); j++) {
-            cout << C[i][j] << endl;
+            s += C[i][j];
         }
+        s += '\n';
     }
 
     return s;
@@ -97,7 +146,7 @@ string Canvas::to_string() {
 //
 void Canvas::replace(char old_char, char new_char) {
     for (int i = 0; i < _width; i++) {
-        for (int j = 0; j < _width; j++) {
+        for (int j = 0; j < 5; j++) {
             if (C[i][j] == old_char) {
                 C[i][j] = new_char;
             }
