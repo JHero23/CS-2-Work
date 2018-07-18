@@ -46,56 +46,52 @@ Canvas::Canvas(char x) {
 
     for (int i = 0; i < _width; i++) {
         for (int j = 0; j < _width; j++) {
-            if (x == 'A' || x == 'B' || x == 'C' || x == 'D') {
-                if ((i == 1 || i == 2 || i == 3) && j == 0) {
+            if (x == 'A') {
+                if ((i == 0 && j == 0) || (i == 0 && j == 4)) {
+                    C[i][j] = ' ';
+                } else if ((i == 1 || i == 3 || i == 4) && (j == 1 || j == 2 || j == 3)) {
+                    C[i][j] = ' ';
+                } else {
                     C[i][j] = '#';
                 }
-                if (i == 0 && (j == 1 || j == 2 || j == 3)) {
+            } else if (x == 'B') {
+                if ((i == 1 || i == 3) && (j == 1 || j == 2 || j == 3)) {
+                    C[i][j] = ' ';
+                } else if ((i == 0 || i == 2 || i == 4) && (j == 4)) {
+                    C[i][j] = ' ';
+                } else {
                     C[i][j] = '#';
                 }
-            }
-            if (x == 'B' || x == 'C' || x == 'D') {
-                if (i == 4 && (j == 1 || j == 2 || j == 3)) {
+            } else if (x == 'C') {
+                if ((i == 0 || i == 4) && (j == 0)) {
+                    C[i][j] = ' ';
+                } else if ((i == 1 || i == 2 || i == 3) && (j == 1 || j == 2 || j == 3 || j == 4)) {
+                    C[i][j] = ' ';
+                } else {
                     C[i][j] = '#';
                 }
-            }
-            if (x == 'A' || x == 'D') {
-                if ((i == 1 || i == 2 || i == 3) && j == 4) {
+            } else if (x == 'D') {
+                if ((i == 0 || i == 4) && (j == 4)) {
+                    C[i][j] = ' ';
+                } else if ((i == 1 || i == 2 || i == 3) && (j == 1 || j == 2 || j == 3)) {
+                    C[i][j] = ' ';
+                } else {
                     C[i][j] = '#';
                 }
-            }
-            if (x == 'A' || x == 'B') {
-                if (i == 2 && (j == 1 || j == 2 || j == 3)) {
-                    C[i][j] == '#';
-                }
-            }
-            if (x == 'A' || x == 'B' || x == 'D') {
-                if (i == 4 && j == 0) {
-                    C[i][j] = '#';
-                }
-            }
-            if (x == 'B' || x == 'D') {
-                if (i == 0 && j == 0) {
-                    C[i][j] = '#';
-                }
-            }
-            if (x == 'A' || x == 'C') {
-                if (i == 4 && j == 4) {
-                    C[i][j] = '#';
-                }
-            }
-            if (x == 'C') {
-                if (i == 0 && j == 4) {
-                    C[i][j] = '#';
-                }
-            }
-            if (x == 'B') {
-                if ((i == 1 || i == 3) && j == 4) {
-                    C[i][j] = '#';
-                }
+            } else {
+                C[i][j] = ' ';
             }
         }
     }
+
+//    if (x == 'D') {
+//        for (int i = 0; i < _width; i++) {
+//            for (int j = 0; j < _width; j++) {
+//                cout << C[i][j];
+//            }
+//            cout << endl;
+//        }
+//    }
 }
 
 // Allocates a canvas containing the sequence of characters
@@ -157,7 +153,23 @@ void Canvas::replace(char old_char, char new_char) {
 
 // Adds a character to the Canvas's sequence of characters.
 void Canvas::add(char x) {
-
+//    _width += width();
+//
+//    char** new_C;
+//
+//    new_C = new char*[2 * width()];
+//
+//    for (int i = 0; i < 2 * width(); i++) {
+//        new_C[i] = new char[_width];
+//    }
+//
+//    for (int i = 0; i < 5; i++) {
+//        for (int j = 0; j < width(); j++) {
+//            new_C[i][j] = C[i][j];
+//        }
+//    }
+//
+//    for (int i = 0; i < )
 }
 
 // Destructor. Deallocates all of the memory allocated by the canvas.
