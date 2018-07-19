@@ -83,15 +83,6 @@ Canvas::Canvas(char x) {
             }
         }
     }
-
-//    if (x == 'D') {
-//        for (int i = 0; i < _width; i++) {
-//            for (int j = 0; j < _width; j++) {
-//                cout << C[i][j];
-//            }
-//            cout << endl;
-//        }
-//    }
 }
 
 // Allocates a canvas containing the sequence of characters
@@ -108,7 +99,12 @@ Canvas::Canvas(char x) {
 // Any characters in s not from {'A', 'B', 'C', 'D'} should be
 // replaced with empty 5x5 space, just like previous constructor.
 Canvas::Canvas(string s) {
+    _width = 5;
 
+    C = new char*[_width];
+    for (int i = 0; i < _width; i++) {
+        C[i] = new char[_width];
+    }
 }
 
 // Returns the width of the canvas.
@@ -148,28 +144,50 @@ void Canvas::replace(char old_char, char new_char) {
             }
         }
     }
-
 }
 
 // Adds a character to the Canvas's sequence of characters.
 void Canvas::add(char x) {
-//    _width += width();
-//
-//    char** new_C;
-//
-//    new_C = new char*[2 * width()];
-//
-//    for (int i = 0; i < 2 * width(); i++) {
-//        new_C[i] = new char[_width];
-//    }
-//
-//    for (int i = 0; i < 5; i++) {
-//        for (int j = 0; j < width(); j++) {
-//            new_C[i][j] = C[i][j];
-//        }
-//    }
-//
-//    for (int i = 0; i < )
+    char** new_C;
+
+    // OLD CANVAS
+    cout << "Canvas 1 width is: " << width() << endl;
+    cout << "CANVAS 1:" << endl;
+    for (int i = 0; i < width(); i++) {
+        for (int j = 0; j < width(); j++) {
+            cout << C[i][j];
+        }
+        cout << endl;
+    }
+    // NEW CANVAS
+    // Initialize new Canvas
+    _width += 7;
+    new_C = new char*[width()];
+    // Make a blank new Canvas
+    for (int i = 0; i < width(); i++) {
+        new_C[i] = new char[5];
+        for (int j = 0; j < 5; j++) {
+            new_C[i][j] = ' ';
+        }
+    }
+    // Transfer data from the old Canvas to the new Canvas
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            new_C[i][j] = C[i][j];
+        }
+    }
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < _width; j++) {
+            cout << new_C[i][j];
+        }
+        cout << endl;
+    }
+
+    // Delete the new array, to work with the old array
+    for (int i = 0; i < width(); i++) {
+        delete [] new_C[i];
+    }
+    delete [] new_C;
 }
 
 // Destructor. Deallocates all of the memory allocated by the canvas.

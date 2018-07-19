@@ -33,19 +33,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2018.1.6\bin\cmake\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Users\tpc345\AppData\Roaming\JetBrains\CLion 2018.1.6\bin\cmake\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2018.1.6\bin\cmake\bin\cmake.exe" -E remove -f
+RM = "C:\Users\tpc345\AppData\Roaming\JetBrains\CLion 2018.1.6\bin\cmake\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\joelg\CLionProjects\hwART
+CMAKE_SOURCE_DIR = C:\Users\tpc345\CLionProjects\hwART
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\joelg\CLionProjects\hwART\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\tpc345\CLionProjects\hwART\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/hwART.dir/depend.make
@@ -58,16 +58,16 @@ include CMakeFiles/hwART.dir/flags.make
 
 CMakeFiles/hwART.dir/main.cpp.obj: CMakeFiles/hwART.dir/flags.make
 CMakeFiles/hwART.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\joelg\CLionProjects\hwART\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hwART.dir/main.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwART.dir\main.cpp.obj -c C:\Users\joelg\CLionProjects\hwART\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tpc345\CLionProjects\hwART\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hwART.dir/main.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwART.dir\main.cpp.obj -c C:\Users\tpc345\CLionProjects\hwART\main.cpp
 
 CMakeFiles/hwART.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hwART.dir/main.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\joelg\CLionProjects\hwART\main.cpp > CMakeFiles\hwART.dir\main.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tpc345\CLionProjects\hwART\main.cpp > CMakeFiles\hwART.dir\main.cpp.i
 
 CMakeFiles/hwART.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hwART.dir/main.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\joelg\CLionProjects\hwART\main.cpp -o CMakeFiles\hwART.dir\main.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tpc345\CLionProjects\hwART\main.cpp -o CMakeFiles\hwART.dir\main.cpp.s
 
 CMakeFiles/hwART.dir/main.cpp.obj.requires:
 
@@ -82,16 +82,16 @@ CMakeFiles/hwART.dir/main.cpp.obj.provides.build: CMakeFiles/hwART.dir/main.cpp.
 
 CMakeFiles/hwART.dir/canvas.cpp.obj: CMakeFiles/hwART.dir/flags.make
 CMakeFiles/hwART.dir/canvas.cpp.obj: ../canvas.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\joelg\CLionProjects\hwART\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hwART.dir/canvas.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwART.dir\canvas.cpp.obj -c C:\Users\joelg\CLionProjects\hwART\canvas.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tpc345\CLionProjects\hwART\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hwART.dir/canvas.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwART.dir\canvas.cpp.obj -c C:\Users\tpc345\CLionProjects\hwART\canvas.cpp
 
 CMakeFiles/hwART.dir/canvas.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hwART.dir/canvas.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\joelg\CLionProjects\hwART\canvas.cpp > CMakeFiles\hwART.dir\canvas.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tpc345\CLionProjects\hwART\canvas.cpp > CMakeFiles\hwART.dir\canvas.cpp.i
 
 CMakeFiles/hwART.dir/canvas.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hwART.dir/canvas.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\joelg\CLionProjects\hwART\canvas.cpp -o CMakeFiles\hwART.dir\canvas.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tpc345\CLionProjects\hwART\canvas.cpp -o CMakeFiles\hwART.dir\canvas.cpp.s
 
 CMakeFiles/hwART.dir/canvas.cpp.obj.requires:
 
@@ -118,7 +118,7 @@ hwART.exe: CMakeFiles/hwART.dir/build.make
 hwART.exe: CMakeFiles/hwART.dir/linklibs.rsp
 hwART.exe: CMakeFiles/hwART.dir/objects1.rsp
 hwART.exe: CMakeFiles/hwART.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\joelg\CLionProjects\hwART\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable hwART.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\tpc345\CLionProjects\hwART\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable hwART.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\hwART.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -136,6 +136,6 @@ CMakeFiles/hwART.dir/clean:
 .PHONY : CMakeFiles/hwART.dir/clean
 
 CMakeFiles/hwART.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\joelg\CLionProjects\hwART C:\Users\joelg\CLionProjects\hwART C:\Users\joelg\CLionProjects\hwART\cmake-build-debug C:\Users\joelg\CLionProjects\hwART\cmake-build-debug C:\Users\joelg\CLionProjects\hwART\cmake-build-debug\CMakeFiles\hwART.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\tpc345\CLionProjects\hwART C:\Users\tpc345\CLionProjects\hwART C:\Users\tpc345\CLionProjects\hwART\cmake-build-debug C:\Users\tpc345\CLionProjects\hwART\cmake-build-debug C:\Users\tpc345\CLionProjects\hwART\cmake-build-debug\CMakeFiles\hwART.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/hwART.dir/depend
 
