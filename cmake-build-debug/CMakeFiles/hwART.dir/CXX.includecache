@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/joelg/CLionProjects/hwART/canvas.cpp
+C:/Users/tpc345/CLionProjects/hwART/canvas.cpp
 iostream
 -
 cstring
 -
 canvas.h
-C:/Users/joelg/CLionProjects/hwART/canvas.h
+C:/Users/tpc345/CLionProjects/hwART/canvas.h
 
-C:/Users/joelg/CLionProjects/hwART/canvas.h
+C:/Users/tpc345/CLionProjects/hwART/canvas.h
 string
 -
 
-C:/Users/joelg/CLionProjects/hwART/main.cpp
+C:/Users/tpc345/CLionProjects/hwART/main.cpp
 string
 -
 cstdlib
@@ -26,5 +26,5 @@ cstdlib
 iostream
 -
 canvas.h
-C:/Users/joelg/CLionProjects/hwART/canvas.h
+C:/Users/tpc345/CLionProjects/hwART/canvas.h
 
