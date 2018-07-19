@@ -2,10 +2,16 @@
 // Created by joelg on 7/16/2018.
 //
 #include <iostream>
+#include <cstring>
 #include "canvas.h"
 
 using namespace std;
 
+char* a[] = { " ### ", "#    #", "#####", "#    #", "#    #"};
+char* b[] = {"#### ", "#   #", "#### ", "#   #", "#### "};
+char* c[] = {" ####", "#    ", "#    ", "#    ", " ####"};
+char* d[] = {"#### ", "#   #", "#   #", "#   #", "#### "};
+char* no[] = {"     ", "     ", "     ", "     ", "     ",};
 // Allocates a canvas of the given width and height 5 that
 // consists entirely of ' ' (space) chars.
 Canvas::Canvas(int width) {
@@ -37,50 +43,23 @@ Canvas::Canvas(int width) {
 // allocates a canvas of ' ' chars with width 5 and height 5.
 Canvas::Canvas(char x) {
     _width = 5;
+    string s(_width, ' ');
 
-    C = new char*[_width];
+    C = new char*[5];
 
-    for (int i = 0; i < _width; i++) {
-        C[i] = new char[_width];
-    }
-
-    for (int i = 0; i < _width; i++) {
-        for (int j = 0; j < _width; j++) {
-            if (x == 'A') {
-                if ((i == 0 && j == 0) || (i == 0 && j == 4)) {
-                    C[i][j] = ' ';
-                } else if ((i == 1 || i == 3 || i == 4) && (j == 1 || j == 2 || j == 3)) {
-                    C[i][j] = ' ';
-                } else {
-                    C[i][j] = '#';
-                }
-            } else if (x == 'B') {
-                if ((i == 1 || i == 3) && (j == 1 || j == 2 || j == 3)) {
-                    C[i][j] = ' ';
-                } else if ((i == 0 || i == 2 || i == 4) && (j == 4)) {
-                    C[i][j] = ' ';
-                } else {
-                    C[i][j] = '#';
-                }
-            } else if (x == 'C') {
-                if ((i == 0 || i == 4) && (j == 0)) {
-                    C[i][j] = ' ';
-                } else if ((i == 1 || i == 2 || i == 3) && (j == 1 || j == 2 || j == 3 || j == 4)) {
-                    C[i][j] = ' ';
-                } else {
-                    C[i][j] = '#';
-                }
-            } else if (x == 'D') {
-                if ((i == 0 || i == 4) && (j == 4)) {
-                    C[i][j] = ' ';
-                } else if ((i == 1 || i == 2 || i == 3) && (j == 1 || j == 2 || j == 3)) {
-                    C[i][j] = ' ';
-                } else {
-                    C[i][j] = '#';
-                }
-            } else {
-                C[i][j] = ' ';
-            }
+    for (int r = 0; r < 5; r++) {
+        C[r] = new char[_width + 1];
+        memset(C[r], NULL, _width + 1);
+        if (x == 'A') {
+            strncpy(C[r], a[r], _width);
+        } else if (x == 'B') {
+            strncpy(C[r], b[r], _width);
+        } else if (x == 'C') {
+            strncpy(C[r], c[r], _width);
+        } else if (x == 'D') {
+            strncpy(C[r], d[r], _width);
+        } else {
+            strncpy(C[r], no[r], _width);
         }
     }
 }
@@ -158,23 +137,47 @@ void Canvas::add(char x) {
     cout << endl;
     // NEW CANVAS
     // Initialize new Canvas
-    _width += _width + 2;
-    char** nC = new char*[_width];
+    _width += 7;
+    char** nC = new char*[5];
 
-    for (int i = 0; i < _width; i++) {
-        nC[i] = new char[5];
-    }
-    for (int i = 0; i < width(); i++) {
-        for (int j = 0; j < 5; j++) {
-            nC[i][j] = ' ';
+    for (int r = 0; r < 5; r++) {
+        nC[r] = new char[_width + 1];
+        memset(nC[r], '\0', _width + 1);
+
+        if (x == 'A') {
+            strncpy(nC[r], C[r], _width - 7);
+            strncat(nC[r], "  ", 2);
+            strncpy(nC[r], a[r], 5);
+        } else if (x == 'B') {
+            strncpy(nC[r], C[r], _width - 7);
+            strncat(nC[r], "  ", 2);
+            strncpy(nC[r], b[r], 5);
+        } else if (x == 'C') {
+            strncpy(nC[r], C[r], _width - 7);
+            strncat(nC[r], "  ", 2);
+            strncpy(nC[r], c[r], 5);
+        } else if (x == 'D') {
+            strncpy(nC[r], C[r], _width - 7);
+            strncat(nC[r], "  ", 2);
+            strncpy(nC[r], d[r], 5);
+        } else {
+            strncpy(nC[r], C[r], _width - 7);
+            strncat(nC[r], "  ", 2);
+            strncpy(nC[r], no[r], 5);
         }
     }
-    // USE THE OFFSET TO ACCESS INDEXES THAT ARE OUT OF BOUNDS PER SE
-    char* offset = &(C[-_width + 1][-4]);
 
-    for (int i = 0; i < width(); i++) {
-
+    for (int r = 0; r < 5; r++) {
+        delete [] C[r];
     }
+    delete [] C;
+
+    C = nC;
+
+    for (int r = 0; r < 5; r++) {
+        delete[] nC[r];
+    }
+    delete[] C;
 }
 
 // Destructor. Deallocates all of the memory allocated by the canvas.
