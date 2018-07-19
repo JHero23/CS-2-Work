@@ -148,98 +148,33 @@ void Canvas::replace(char old_char, char new_char) {
 
 // Adds a character to the Canvas's sequence of characters.
 void Canvas::add(char x) {
-    char** temp = new char*[5];
-    // OLD CANVAS
-    cout << "Canvas 1 width is: " << width() << endl;
-    cout << "CANVAS 1:" << endl;
-    for (int i = 0; i < width(); i++) {
-        temp[i] = new char[width()];
-    }
+    // OLD CANVAS IN A TEMP VARIABLE
     for (int i = 0; i < width(); i++) {
         for (int j = 0; j < width(); j++) {
-            temp[i][j] = C[i][j];
-        }
-    }
-    for (int i = 0; i < width(); i++) {
-        for (int j = 0; j < width(); j++) {
-            cout << temp[i][j];
+            cout << C[i][j];
         }
         cout << endl;
     }
-
-    for (int i = 0; i < width(); i++) {
-        temp[i] = new char[5];
-        for (int j = 0; j < 5; j++) {
-            if (x == 'A') {
-                if ((i == 0 && j == 0) || (i == 0 && j == 4)) {
-                    temp[i][j] = ' ';
-                } else if ((i == 1 || i == 3 || i == 4) && (j == 1 || j == 2 || j == 3)) {
-                    temp[i][j] = ' ';
-                } else {
-                    temp[i][j] = '#';
-                }
-            } else if (x == 'B') {
-                if ((i == 1 || i == 3) && (j == 1 || j == 2 || j == 3)) {
-                    temp[i][j] = ' ';
-                } else if ((i == 0 || i == 2 || i == 4) && (j == 4)) {
-                    temp[i][j] = ' ';
-                } else {
-                    temp[i][j] = '#';
-                }
-            } else if (x == 'C') {
-                if ((i == 0 || i == 4) && (j == 0)) {
-                    temp[i][j] = ' ';
-                } else if ((i == 1 || i == 2 || i == 3) && (j == 1 || j == 2 || j == 3 || j == 4)) {
-                    temp[i][j] = ' ';
-                } else {
-                    temp[i][j] = '#';
-                }
-            } else if (x == 'D') {
-                if ((i == 0 || i == 4) && (j == 4)) {
-                    temp[i][j] = ' ';
-                } else if ((i == 1 || i == 2 || i == 3) && (j == 1 || j == 2 || j == 3)) {
-                    temp[i][j] = ' ';
-                } else {
-                    temp[i][j] = '#';
-                }
-            } else {
-                temp[i][j] = ' ';
-            }
-        }
-    }
+    cout << endl;
     // NEW CANVAS
     // Initialize new Canvas
-    _width += 7;
+    _width += _width + 2;
     char** nC = new char*[_width];
-    // Make a blank new Canvas
-    for (int i = 0; i < width(); i++) {
+
+    for (int i = 0; i < _width; i++) {
         nC[i] = new char[5];
+    }
+    for (int i = 0; i < width(); i++) {
         for (int j = 0; j < 5; j++) {
             nC[i][j] = ' ';
         }
     }
-    // Transfer data from the old Canvas to the new Canvas
-    C = nC;
-    for (int j = 0; j < width(); j++) {
-        if (j == 7) {
-            for (int i = 0; i < 5; i++) {
-                C[i][j] = temp[i][j];
-            }
-        }
-    }
+    // USE THE OFFSET TO ACCESS INDEXES THAT ARE OUT OF BOUNDS PER SE
+    char* offset = &(C[-_width + 1][-4]);
+
     for (int i = 0; i < width(); i++) {
-        for (int j = 0; j < 5; j++) {
-            cout << nC[i][j];
-        }
-        cout << endl;
+
     }
-    // Delete the new array, to work with the old array
-    for (int i = 0; i < width(); i++) {
-        delete [] nC[i];
-    }
-    delete [] nC;
-    // Shift to the right side of the array.
-//    for (int i = 0; i < )
 }
 
 // Destructor. Deallocates all of the memory allocated by the canvas.
