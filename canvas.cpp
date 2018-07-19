@@ -7,7 +7,7 @@
 
 using namespace std;
 
-char* a[] = { " ### ", "#    #", "#####", "#    #", "#    #"};
+char* a[] = { " ### ", "#   #", "#####", "#   #", "#   #",};
 char* b[] = {"#### ", "#   #", "#### ", "#   #", "#### "};
 char* c[] = {" ####", "#    ", "#    ", "#    ", " ####"};
 char* d[] = {"#### ", "#   #", "#   #", "#   #", "#### "};
@@ -62,6 +62,13 @@ Canvas::Canvas(char x) {
             strncpy(C[r], no[r], _width);
         }
     }
+
+    /*for (int r = 0; r < 5; r++) {
+        for (int c = 0; c < 5; c++) {
+            cout << C[r][c];
+        }
+        cout << endl;
+    }*/
 }
 
 // Allocates a canvas containing the sequence of characters
@@ -97,9 +104,11 @@ string Canvas::to_string() {
     string s = "";
 
     for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < width(); j++) {
+        for (int j = 0; j < _width; j++) {
+            cout << C[i][j];
             s += C[i][j];
         }
+        cout << endl;
         s += '\n';
     }
 
@@ -127,14 +136,6 @@ void Canvas::replace(char old_char, char new_char) {
 
 // Adds a character to the Canvas's sequence of characters.
 void Canvas::add(char x) {
-    // OLD CANVAS IN A TEMP VARIABLE
-    for (int i = 0; i < width(); i++) {
-        for (int j = 0; j < width(); j++) {
-            cout << C[i][j];
-        }
-        cout << endl;
-    }
-    cout << endl;
     // NEW CANVAS
     // Initialize new Canvas
     _width += 7;
@@ -170,19 +171,17 @@ void Canvas::add(char x) {
     for (int r = 0; r < 5; r++) {
         delete [] C[r];
     }
-    delete [] C;
 
     C = nC;
 
     for (int r = 0; r < 5; r++) {
-        delete[] nC[r];
+        delete [] nC[r];
     }
-    delete[] C;
 }
 
 // Destructor. Deallocates all of the memory allocated by the canvas.
 Canvas::~Canvas() {
-    for (int i = 0; i < width(); i++) {
+    for (int i = 0; i < _width; i++) {
         delete [] C[i];
     }
     delete [] C;
