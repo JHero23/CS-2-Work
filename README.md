@@ -5,7 +5,8 @@
   ## Notice
   Do not copy this assignment as this is for only educational purposes only and growing portfolio.
   ### Assignment
-  The purpose of this assignment is to experiment and practice basic Computer Science and Engineering fundamentals.
+  The purpose of this assignment is to experiment and practice basic Computer Science and Engineering fundamentals. Such fundamentals include:
+  - Object Oriented Programming.
   
   ### Description
   The program creates different pokemon objects with various types and calculate their damage assessment when attacked with another pokemon.
