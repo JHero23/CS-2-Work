@@ -3,4 +3,4 @@ project(hwART)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(hwART main.cpp canvas.cpp canvas.h)
+add_executable(hwART main.cpp canvas.h canvas.cpp)

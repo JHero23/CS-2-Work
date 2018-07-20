@@ -1,17 +1,12 @@
 //
-// Created by joelg on 7/16/2018.
+// Created by joelg on 7/19/2018.
 //
 #include <iostream>
-#include <cstring>
+#include <string>
 #include "canvas.h"
 
 using namespace std;
 
-char* a[] = { " ### ", "#   #", "#####", "#   #", "#   #"};
-char* b[] = {"#### ", "#   #", "#### ", "#   #", "#### "};
-char* c[] = {" ####", "#    ", "#    ", "#    ", " ####"};
-char* d[] = {"#### ", "#   #", "#   #", "#   #", "#### "};
-char* no[] = {"     ", "     ", "     ", "     ", "     "};
 // Allocates a canvas of the given width and height 5 that
 // consists entirely of ' ' (space) chars.
 Canvas::Canvas(int width) {
@@ -46,19 +41,47 @@ Canvas::Canvas(char x) {
 
     C = new char*[5];
 
-    for (int r = 0; r < 5; r++) {
-        C[r] = new char[_width + 1];
-        memset(C[r], 0, _width + 1);
-        if (x == 'A') {
-            strncpy(C[r], a[r], _width);
-        } else if (x == 'B') {
-            strncpy(C[r], b[r], _width);
-        } else if (x == 'C') {
-            strncpy(C[r], c[r], _width);
-        } else if (x == 'D') {
-            strncpy(C[r], d[r], _width);
-        } else {
-            strncpy(C[r], no[r], _width);
+    for (int i = 0; i < 5; i++) {
+        C[i] = new char[_width];
+    }
+
+    for (int i = 0; i < _width; i++) {
+        for (int j = 0; j < _width; j++) {
+            if (x == 'A') {
+                if ((i == 0 && j == 0) || (i == 0 && j == 4)) {
+                    C[i][j] = ' ';
+                } else if ((i == 1 || i == 3 || i == 4) && (j == 1 || j == 2 || j == 3)) {
+                    C[i][j] = ' ';
+                } else {
+                    C[i][j] = '#';
+                }
+            } else if (x == 'B') {
+                if ((i == 1 || i == 3) && (j == 1 || j == 2 || j == 3)) {
+                    C[i][j] = ' ';
+                } else if ((i == 0 || i == 2 || i == 4) && (j == 4)) {
+                    C[i][j] = ' ';
+                } else {
+                    C[i][j] = '#';
+                }
+            } else if (x == 'C') {
+                if ((i == 0 || i == 4) && (j == 0)) {
+                    C[i][j] = ' ';
+                } else if ((i == 1 || i == 2 || i == 3) && (j == 1 || j == 2 || j == 3 || j == 4)) {
+                    C[i][j] = ' ';
+                } else {
+                    C[i][j] = '#';
+                }
+            } else if (x == 'D') {
+                if ((i == 0 || i == 4) && (j == 4)) {
+                    C[i][j] = ' ';
+                } else if ((i == 1 || i == 2 || i == 3) && (j == 1 || j == 2 || j == 3)) {
+                    C[i][j] = ' ';
+                } else {
+                    C[i][j] = '#';
+                }
+            } else {
+                C[i][j] = ' ';
+            }
         }
     }
 }
@@ -77,19 +100,20 @@ Canvas::Canvas(char x) {
 // Any characters in s not from {'A', 'B', 'C', 'D'} should be
 // replaced with empty 5x5 space, just like previous constructor.
 Canvas::Canvas(string s) {
-    Canvas nC(s[0]);
+   Canvas nC(s[0]);
 
-    for (int r = 1; r < s.length(); r++) {
-        nC.add(s[r]);
-    }
+   for (int i = 1; i < s.length(); i++) {
+       nC.add(s[i]);
+   }
 
-    C = new char*[5];
+   C = new char*[5];
 
-    for (int r = 0; r < 5; r++) {
-        C[r] = new char[nC._width + 1];
-        memset(C[r], 0, nC._width + 1);
-        strncpy(C[r], nC.C[r], nC._width);
-    }
+   for (int r = 0; r < 5; r++) {
+       C[r] = new char[nC._width + 1];
+       for (int c = 0; c < nC._width; c++) {
+           C[r][c] = nC.C[r][c];
+       }
+   }
 
     _width = nC._width;
 }
@@ -102,7 +126,7 @@ int Canvas::width() {
 // Returns the entire canvas as a single string, consisting of each row
 // of the canvas, followed by the newline character ('\n').
 string Canvas::to_string() {
-    string s;
+    string s = "";
 
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < _width; j++) {
@@ -124,8 +148,8 @@ string Canvas::to_string() {
 // #   #           @   @
 //
 void Canvas::replace(char old_char, char new_char) {
-    for (int i = 0; i < _width; i++) {
-        for (int j = 0; j < 5; j++) {
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < _width; j++) {
             if (C[i][j] == old_char) {
                 C[i][j] = new_char;
             }
@@ -135,51 +159,70 @@ void Canvas::replace(char old_char, char new_char) {
 
 // Adds a character to the Canvas's sequence of characters.
 void Canvas::add(char x) {
-    // NEW CANVAS
-    // Initialize new Canvas
-    _width += 7;
     char** nC = new char*[5];
 
     for (int r = 0; r < 5; r++) {
-        nC[r] = new char[_width + 1];
-        memset(nC[r], 0, _width + 1);
+        nC[r] = new char[_width + 7];
+        for (int c = 0; c < _width; c++) {
+            nC[r][c] = C[r][c];
+        }
 
-        if (x == 'A') {
-            strncpy(nC[r], C[r], _width - 7);
-            strncat(nC[r], "  ", 2);
-            strncat(nC[r], a[r], 5);
-        } else if (x == 'B') {
-            strncpy(nC[r], C[r], _width - 7);
-            strncat(nC[r], "  ", 2);
-            strncat(nC[r], b[r], 5);
-        } else if (x == 'C') {
-            strncpy(nC[r], C[r], _width - 7);
-            strncat(nC[r], "  ", 2);
-            strncat(nC[r], c[r], 5);
-        } else if (x == 'D') {
-            strncpy(nC[r], C[r], _width - 7);
-            strncat(nC[r], "  ", 2);
-            strncat(nC[r], d[r], 5);
-        } else {
-            strncpy(nC[r], C[r], _width - 7);
-            strncat(nC[r], "  ", 2);
-            strncat(nC[r], no[r], 5);
+        nC[r][_width] = ' ';
+        nC[r][_width + 1] = ' ';
+
+        for (int c = 0; c < 5; c++) {
+            if (x == 'A') {
+                if ((r == 0 && c == 0) || (r == 0 && c == 4)) {
+                    nC[r][c + _width + 2] = ' ';
+                } else if ((r == 1 || r == 3 || r == 4) && (c == 1 || c == 2 || c == 3)) {
+                    nC[r][c + _width + 2] = ' ';
+                } else {
+                    nC[r][c + _width + 2] = '#';
+                }
+            } else if (x == 'B') {
+                if ((r == 1 || r == 3) && (c == 1 || c == 2 || c == 3)) {
+                    nC[r][c + _width + 2] = ' ';
+                } else if ((r == 0 || r == 2 || r == 4) && (c == 4)) {
+                    nC[r][c + _width + 2] = ' ';
+                } else {
+                    nC[r][c + _width + 2] = '#';
+                }
+            } else if (x == 'C') {
+                if ((r == 0 || r == 4) && (c == 0)) {
+                    nC[r][c + _width + 2] = ' ';
+                } else if ((r == 1 || r == 2 || r == 3) && (c == 1 || c == 2 || c == 3 || c == 4)) {
+                    nC[r][c + _width + 2] = ' ';
+                } else {
+                    nC[r][c + _width + 2] = '#';
+                }
+            } else if (x == 'D') {
+                if ((r == 0 || r == 4) && (c == 4)) {
+                    nC[r][c + _width + 2] = ' ';
+                } else if ((r == 1 || r == 2 || r == 3) && (c == 1 || c == 2 || c == 3)) {
+                    nC[r][c + _width + 2] = ' ';
+                } else {
+                    nC[r][c + _width + 2]= '#';
+                }
+            } else {
+                nC[r][c + _width + 2] = ' ';
+            }
         }
     }
 
-    for (int r = 0; r < 5; r++) {
-        delete C[r];
+    for (int i = 0; i < 5; i++) {
+        delete C[i];
     }
-
     delete C;
 
     C = nC;
+
+    _width += 7;
 }
 
 // Destructor. Deallocates all of the memory allocated by the canvas.
 Canvas::~Canvas() {
     for (int i = 0; i < 5; i++) {
-        delete C[i];
+        delete [] C[i];
     }
-    delete C;
+    delete [] C;
 }
