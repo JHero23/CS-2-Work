@@ -8,9 +8,39 @@ from CS 1.
 NOTICE: This 'pokemon.cpp' is my original work, do not copy.
 CREDITS: Andrew Winslow for supplying 'pokemon.h' and 'main.cpp' as a homework exercises.
 */
+#include <iostream>
 #include "pokemon.h"
 
 using namespace std;
+
+// Initializes a Pokemon from a summary string
+//
+// Hint: check out the stoi function in <string>
+Pokemon::Pokemon(string summary) {
+    stringstream ss(summary);
+    string word;
+    string tokens[4] = {};
+    int i = 0;
+
+    while (getline(ss, tokens[i], ',')) {
+        i++;
+    }
+
+    cout << sizeof(tokens)/sizeof(tokens[0]) << endl;
+
+    for (int i = 0; i < sizeof(tokens)/sizeof(tokens[0]); i++) {
+        cout << tokens[i] << endl;
+    }
+
+}
+
+// Returns the summary string of the Pokemon
+//
+// Hint: check out the ostringstream class in <sstream>
+string Pokemon::summary() {
+
+}
+
 
 // Initializes a single-type Pokemon using the information provided
 Pokemon::Pokemon(string name, int ndex, Pokemon::Type type1) {

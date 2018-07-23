@@ -69,7 +69,22 @@ int Pokedex::size() {
 // 1. type_to_string(Pokemon::Poison) returns "Poison".
 // 2. type_to_string(Pokemon::Normal) returns "Normal".
 string type_to_string(Pokemon::Type t) {
-    return "";
+    string type;
+    switch (t) {
+        case Pokemon::Normal:
+            type = "Normal";
+            break;
+        case Pokemon::Poison:
+            type = "Poison";
+            break;
+        case Pokemon::Fighting:
+            type = "Fighting";
+            break;
+        case Pokemon::Flying:
+            type = "Flying";
+            break;
+    }
+    return type;
 }
 
 // Returns the type corresponding to a string. Examples:
@@ -78,5 +93,13 @@ string type_to_string(Pokemon::Type t) {
 // 3. Allowed to return anything if given string doesn't
 //    correspond to a Pokemon type.
 Pokemon::Type string_to_type(string s) {
-    return Pokemon::Poison;
+    if (s == "Normal") {
+        return Pokemon::Normal;
+    } else if (s == "Poison") {
+        return Pokemon::Poison;
+    } else if (s == "Fighting") {
+        return Pokemon::Fighting;
+    } else if (s == "Flying") {
+        return Pokemon::Flying;
+    }
 }
