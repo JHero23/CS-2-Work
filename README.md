@@ -21,7 +21,7 @@ This program contains two different techniques in converting ASCII Art.
 
 ### Acknowledgements
 
-[Andrew Winslow](https://github.com/andrewwinslow) for allowing me to practice on his homework assignments, supplying main.cpp and pokemon.h to further my studies as a Computer Engineer.
+[Andrew Winslow](https://github.com/andrewwinslow) for allowing me to practice on his homework assignments, supplying main.cpp and canvas.h to further my studies as a Computer Engineer.
 
 ### Sources
 
