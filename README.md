@@ -17,4 +17,4 @@ The purpose of this assignment is to experiment and practice basic Computer Scie
 
 ### Sources
 
-[Andrew Winslow](https://github.com/andrewwinslow/cs2/tree/master/hwHIST1 for supplying [main.cpp](https://github.com/andrewwinslow/cs2/blob/master/hwHIST1/main.cpp) and [browserhistory.h](https://github.com/andrewwinslow/cs2/blob/master/hwHIST1/broswerhistory.h).
+[Andrew Winslow](https://github.com/andrewwinslow/cs2/tree/master/hwHIST1) for supplying [main.cpp](https://github.com/andrewwinslow/cs2/blob/master/hwHIST1/main.cpp) and [browserhistory.h](https://github.com/andrewwinslow/cs2/blob/master/hwHIST1/broswerhistory.h).
