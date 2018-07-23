@@ -80,7 +80,7 @@ int main()
 	// History: [google.com, netflix.com, amazon.com, (utrgv.edu)]
 	test(bh.current_url() == "http://utrgv.edu");
 	test(bh.can_go_back());
-	test(!bh.can_go_forward());	
+	test(!bh.can_go_forward());
 	test(bh.past_url_count() == 3);
 	test(bh.future_url_count() == 0);
 	
