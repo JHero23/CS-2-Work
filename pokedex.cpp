@@ -55,7 +55,6 @@ string Pokemon::summary() {
 
 // Constructs an empty pokedex.
 Pokedex::Pokedex() {
-    cout << sizeof(A)/sizeof(A[0]) << endl;
     for (int i = 0; i < sizeof(A)/sizeof(A[0]); i++) {
         A[i] = nullptr;
     }
@@ -64,29 +63,53 @@ Pokedex::Pokedex() {
 // Constructs a Pokedex with the Pokemon found in
 // the specified file.
 Pokedex::Pokedex(string filename) {
-    ifstream inFile(filename);
+    ifstream inFile;
     string line;
-    int i = 0;
 
-    while (!inFile.eof()) {
-        getline(inFile, line);
-
+    for (int i = 0; i < sizeof(A)/sizeof(A[0]); i++) {
+        A[i] = nullptr;
     }
+
+    inFile.open(filename);
+
+    if (!inFile) {
+        cerr << "File could not be found!" << endl;
+        return;
+    }
+
+    while (getline(inFile, line)) {
+        Pokemon* p = new Pokemon(line);
+        add(p);
+    }
+
+    inFile.close();
 }
 
 // Writes the Pokedex to the file.
 void Pokedex::save(string filename) {
+    ofstream outFile(filename, ofstream::out);
+
+    for (int i = 1; i < sizeof(A)/sizeof(A[0]); i++) {
+        if (A[i] == nullptr) {
+            continue;
+        } else {
+            outFile << A[i]->summary() << endl;
+        }
+    }
+
+    outFile.close();
+
     return;
 }
 
 // Adds a pokemon to the pokedex.
 void Pokedex::add(Pokemon* p) {
-
+    A[p->Ndex()] = p;
 }
 
 // Removes a pokemon from the pokedex.
 void Pokedex::remove(Pokemon* p) {
-    return;
+    A[p->Ndex()] = nullptr;
 }
 
 // Returns a (pointer to a) pokemon in the pokedex with the given name.
@@ -95,6 +118,13 @@ void Pokedex::remove(Pokemon* p) {
 // Hint: loop through all of A, searching for a Pokemon with
 // the given name. Return the first one found.
 Pokemon* Pokedex::lookup_by_name(string name) {
+    for (int i = 1; i < sizeof(A)/sizeof(A[0]); i++) {
+        if (A[i] == nullptr) {
+            continue;
+        } else if (A[i]->name() == name) {
+            return A[i];
+        }
+    }
     return nullptr;
 }
 
@@ -103,12 +133,20 @@ Pokemon* Pokedex::lookup_by_name(string name) {
 //
 // Hint: look in A[ndex].
 Pokemon* Pokedex::lookup_by_Ndex(int ndex) {
-    return nullptr;
+    return A[ndex];
 }
 
 // Returns the number of pokemon in the pokedex.
 int Pokedex::size() {
+    int count = 0;
 
+    for (int i = 1; i < sizeof(A)/sizeof(A[0]); i++) {
+        if (A[i] != nullptr) {
+            ++count;
+        }
+    }
+
+    return count;
 }
 
 // Returns a string corresponding to the type. Examples:
