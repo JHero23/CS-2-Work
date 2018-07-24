@@ -26,11 +26,15 @@ Pokemon::Pokemon(string summary) {
         i++;
     }
 
-    cout << sizeof(tokens)/sizeof(tokens[0]) << endl;
-
-    for (int i = 0; i < sizeof(tokens)/sizeof(tokens[0]); i++) {
-        cout << tokens[i] << endl;
+    while (tokens[i].empty()) {
+        cout << tokens[i] << " ";
+        i++;
     }
+
+    cout << endl;
+//    _name = tokens[0];
+//    _ndex = stoi(tokens[1].erase(0,1));
+//
 
 }
 

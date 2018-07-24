@@ -9,6 +9,3 @@ CMakeFiles/hwPKM2.dir/pokedex.cpp.obj: ../pokedex.cpp
 CMakeFiles/hwPKM2.dir/pokedex.cpp.obj: ../pokedex.h
 CMakeFiles/hwPKM2.dir/pokedex.cpp.obj: ../pokemon.h
 
-CMakeFiles/hwPKM2.dir/pokemon.cpp.obj: ../pokemon.cpp
-CMakeFiles/hwPKM2.dir/pokemon.cpp.obj: ../pokemon.h
-

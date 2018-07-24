@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/hwPKM2.dir/main.cpp.obj"
   "CMakeFiles/hwPKM2.dir/pokedex.cpp.obj"
-  "CMakeFiles/hwPKM2.dir/pokemon.cpp.obj"
   "hwPKM2.pdb"
   "hwPKM2.exe"
   "hwPKM2.exe.manifest"

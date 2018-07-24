@@ -4,9 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/tpc345/CLionProjects/hwPKM2/main.cpp" "C:/Users/tpc345/CLionProjects/hwPKM2/cmake-build-debug/CMakeFiles/hwPKM2.dir/main.cpp.obj"
-  "C:/Users/tpc345/CLionProjects/hwPKM2/pokedex.cpp" "C:/Users/tpc345/CLionProjects/hwPKM2/cmake-build-debug/CMakeFiles/hwPKM2.dir/pokedex.cpp.obj"
-  "C:/Users/tpc345/CLionProjects/hwPKM2/pokemon.cpp" "C:/Users/tpc345/CLionProjects/hwPKM2/cmake-build-debug/CMakeFiles/hwPKM2.dir/pokemon.cpp.obj"
+  "C:/Users/joelg/CLionProjects/hwPKM2/main.cpp" "C:/Users/joelg/CLionProjects/hwPKM2/cmake-build-debug/CMakeFiles/hwPKM2.dir/main.cpp.obj"
+  "C:/Users/joelg/CLionProjects/hwPKM2/pokedex.cpp" "C:/Users/joelg/CLionProjects/hwPKM2/cmake-build-debug/CMakeFiles/hwPKM2.dir/pokedex.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

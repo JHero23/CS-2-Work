@@ -3,4 +3,4 @@ project(hwPKM2)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(hwPKM2 main.cpp pokedex.cpp pokemon.cpp)
+add_executable(hwPKM2 main.cpp pokedex.cpp pokedex.cpp)
