@@ -2,7 +2,7 @@
 This is a homework assignment from CS 2380.
 
 ## Notice
-Do not copy this assignment as this si for only educational puproses only and growing portfolio.
+Do not copy this assignment as this is for only educational puproses only and growing portfolio.
 
 ### Assignment
 The purpose of this assignment is to experiment and practice basic Computer Science and Engineering fundmanetals. Such fundamentals include:
