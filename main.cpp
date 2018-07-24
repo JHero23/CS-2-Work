@@ -128,7 +128,7 @@ int main()
 	test(hoothoot.type2() == Pokemon::Normal);
 	
 
-	// Test summary()	
+	// Test summary()
 	test(bouffalant.summary() == "Bouffalant, #626, Normal,");
 	test(mankey.summary() == "Mankey, #056, Fighting,");
 	test(tornadus.summary() == "Tornadus, #641, Flying,");

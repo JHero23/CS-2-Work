@@ -9,6 +9,50 @@
 // should be the summary string of the Pokemon.
 // See pokemon.txt for an example.
 
+// Initializes a Pokemon from a summary string
+//
+// Hint: check out the stoi function in <string>
+Pokemon::Pokemon(string summary) {
+    stringstream ss(summary);
+    string name, ndex, type1, type2;
+
+    ss >> name;
+    ss >> ndex;
+    ss >> type1;
+    ss >> type2;
+
+    _name = string(name, 0, name.find(','));
+    _ndex = stoi(string(ndex, 1, ndex.find(',')), nullptr, 10);
+
+    if (type2.empty()) {
+        types[0] = types[1] = string_to_type(string(type1, 0, type1.find(',')));
+    } else {
+        types[0] = string_to_type(string(type1, 0, type1.find(',')));
+        types[1] = string_to_type(string(type2, 0, type2.find(',')));
+    }
+}
+
+// Returns the summary string of the Pokemon
+//
+// Hint: check out the ostringstream class in <sstream>
+string Pokemon::summary() {
+    if (types[0] == types[1]) {
+        if (_ndex < 10) {
+            return _name + ", #00" + to_string(_ndex) + ", " + type_to_string(types[0]) + ",";
+        } else if (_ndex > 10 && _ndex < 100) {
+            return _name + ", #0" + to_string(_ndex) + ", " + type_to_string(types[0]) + ",";
+        }
+        return _name + ", #" + to_string(_ndex) + ", " + type_to_string(types[0]) + ",";
+    } else {
+        if (_ndex < 10) {
+            return _name + ", #00" + to_string(_ndex) + ", " + type_to_string(types[0]) + ", " + type_to_string(types[1]) + ",";
+        } else if (_ndex > 10 && _ndex < 100) {
+            return _name + ", #0" + to_string(_ndex) + ", " + type_to_string(types[0]) + ", " + type_to_string(types[1]) + ",";
+        }
+    }
+    return _name + ", #" + to_string(_ndex) + ", " + type_to_string(types[0]) + ", " + type_to_string(types[1]) + ",";
+}
+
 // Constructs an empty pokedex.
 Pokedex::Pokedex() {
     for (int i = 0; i < sizeof(A); i++) {
@@ -21,10 +65,11 @@ Pokedex::Pokedex() {
 Pokedex::Pokedex(string filename) {
     ifstream inFile(filename);
     string line;
+    int i = 0;
 
     while (!inFile.eof()) {
         getline(inFile, line);
-        cout << line << endl;
+
     }
 }
 
@@ -35,7 +80,7 @@ void Pokedex::save(string filename) {
 
 // Adds a pokemon to the pokedex.
 void Pokedex::add(Pokemon* p) {
-    return;
+
 }
 
 // Removes a pokemon from the pokedex.
@@ -62,7 +107,7 @@ Pokemon* Pokedex::lookup_by_Ndex(int ndex) {
 
 // Returns the number of pokemon in the pokedex.
 int Pokedex::size() {
-    return 0;
+    return sizeof(A)/sizeof(A[0]);
 }
 
 // Returns a string corresponding to the type. Examples:
