@@ -55,7 +55,8 @@ string Pokemon::summary() {
 
 // Constructs an empty pokedex.
 Pokedex::Pokedex() {
-    for (int i = 0; i < sizeof(A); i++) {
+    cout << sizeof(A)/sizeof(A[0]) << endl;
+    for (int i = 0; i < sizeof(A)/sizeof(A[0]); i++) {
         A[i] = nullptr;
     }
 }
@@ -107,7 +108,7 @@ Pokemon* Pokedex::lookup_by_Ndex(int ndex) {
 
 // Returns the number of pokemon in the pokedex.
 int Pokedex::size() {
-    return sizeof(A)/sizeof(A[0]);
+
 }
 
 // Returns a string corresponding to the type. Examples:
