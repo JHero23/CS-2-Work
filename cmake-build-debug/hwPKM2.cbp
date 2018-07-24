@@ -91,6 +91,12 @@
 		<Unit filename="C:/Users/joelg/CLionProjects/hwPKM2/pokedex.h">
 			<Option target="hwPKM2"/>
 		</Unit>
+		<Unit filename="C:/Users/joelg/CLionProjects/hwPKM2/pokemon.cpp">
+			<Option target="hwPKM2"/>
+		</Unit>
+		<Unit filename="C:/Users/joelg/CLionProjects/hwPKM2/pokemon.h">
+			<Option target="hwPKM2"/>
+		</Unit>
 		<Unit filename="C:/Users/joelg/CLionProjects/hwPKM2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

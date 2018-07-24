@@ -19,22 +19,20 @@ using namespace std;
 Pokemon::Pokemon(string summary) {
     stringstream ss(summary);
     string word;
-    string tokens[4] = {};
     int i = 0;
 
-    while (getline(ss, tokens[i], ',')) {
+    while (ss >> word) {
         i++;
     }
 
-    while (tokens[i].empty()) {
-        cout << tokens[i] << " ";
+    string tokens[i];
+    i = 0;
+
+    while (getline(ss, word, ',')) {
+        tokens[i] = word;
         i++;
     }
 
-    cout << endl;
-//    _name = tokens[0];
-//    _ndex = stoi(tokens[1].erase(0,1));
-//
 
 }
 

@@ -176,6 +176,33 @@ pokedex.cpp.s:
 	$(MAKE) -f CMakeFiles\hwPKM2.dir\build.make CMakeFiles/hwPKM2.dir/pokedex.cpp.s
 .PHONY : pokedex.cpp.s
 
+pokemon.obj: pokemon.cpp.obj
+
+.PHONY : pokemon.obj
+
+# target to build an object file
+pokemon.cpp.obj:
+	$(MAKE) -f CMakeFiles\hwPKM2.dir\build.make CMakeFiles/hwPKM2.dir/pokemon.cpp.obj
+.PHONY : pokemon.cpp.obj
+
+pokemon.i: pokemon.cpp.i
+
+.PHONY : pokemon.i
+
+# target to preprocess a source file
+pokemon.cpp.i:
+	$(MAKE) -f CMakeFiles\hwPKM2.dir\build.make CMakeFiles/hwPKM2.dir/pokemon.cpp.i
+.PHONY : pokemon.cpp.i
+
+pokemon.s: pokemon.cpp.s
+
+.PHONY : pokemon.s
+
+# target to generate assembly for a file
+pokemon.cpp.s:
+	$(MAKE) -f CMakeFiles\hwPKM2.dir\build.make CMakeFiles/hwPKM2.dir/pokemon.cpp.s
+.PHONY : pokemon.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -191,6 +218,9 @@ help:
 	@echo ... pokedex.obj
 	@echo ... pokedex.i
 	@echo ... pokedex.s
+	@echo ... pokemon.obj
+	@echo ... pokemon.i
+	@echo ... pokemon.s
 .PHONY : help
 
 
