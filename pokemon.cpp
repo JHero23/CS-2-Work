@@ -18,40 +18,26 @@ using namespace std;
 // Hint: check out the stoi function in <string>
 Pokemon::Pokemon(string summary) {
     stringstream ss(summary);
-    string name, ndex, type1, type2;
+    string word;
+    string tokens[4] = {};
+    int i = 0;
 
-    ss >> name;
-    ss >> ndex;
-    ss >> type1;
-    ss >> type2;
-
-    _name = string(name, 0, name.find(','));
-    _ndex = stoi(string(ndex, 1, ndex.find(',')), nullptr, 10);
-
-    if (type2 == "") {
-        types[0] = types[1] = string_to_type(string(type1, 0, type1.find(',')));
-    } else {
-        types[0] = string_to_type(string(type1, 0, type1.find(',')));
-        types[1] = string_to_type(string(type2, 0, type2.find(',')));
+    while (getline(ss, tokens[i], ',')) {
+        i++;
     }
 
-    cout << _ndex << endl;
+    cout << sizeof(tokens)/sizeof(tokens[0]) << endl;
+
+    for (int i = 0; i < sizeof(tokens)/sizeof(tokens[0]); i++) {
+        cout << tokens[i] << endl;
+    }
+
 }
 
 // Returns the summary string of the Pokemon
 //
 // Hint: check out the ostringstream class in <sstream>
 string Pokemon::summary() {
-    if (types[0] == types[1]) {
-        if (_ndex < 100) {
-            return _name + ", #0" + to_string(_ndex) + ", " + type_to_string(types[0]) + ",";
-        } else if (_ndex < 10) {
-            return _name + ", #00" + to_string(_ndex) + ", " + type_to_string(types[0]) + ",";
-        } else {
-            return _name + ", #" + to_string(_ndex) + ", " + type_to_string(types[0]) + ",";
-        }
-    }
-    return _name + ", #" + to_string(_ndex) + ", " + type_to_string(types[0]) + ", " + type_to_string(types[1]) + ",";
 
 }
 
