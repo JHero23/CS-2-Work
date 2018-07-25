@@ -38,19 +38,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Users\tpc345\AppData\Roaming\JetBrains\CLion 2018.1.6\bin\cmake\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2018.1.6\bin\cmake\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Users\tpc345\AppData\Roaming\JetBrains\CLion 2018.1.6\bin\cmake\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2018.1.6\bin\cmake\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\tpc345\CLionProjects\hwLFG1
+CMAKE_SOURCE_DIR = C:\Users\joelg\CLionProjects\hwLFG1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\tpc345\CLionProjects\hwLFG1\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\joelg\CLionProjects\hwLFG1\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = C:\Users\tpc345\CLionProjects\hwLFG1\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Users\tpc345\AppData\Roaming\JetBrains\CLion 2018.1.6\bin\cmake\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2018.1.6\bin\cmake\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,7 +69,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Users\tpc345\AppData\Roaming\JetBrains\CLion 2018.1.6\bin\cmake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2018.1.6\bin\cmake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\tpc345\CLionProjects\hwLFG1\cmake-build-debug\CMakeFiles C:\Users\tpc345\CLionProjects\hwLFG1\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\joelg\CLionProjects\hwLFG1\cmake-build-debug\CMakeFiles C:\Users\joelg\CLionProjects\hwLFG1\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\tpc345\CLionProjects\hwLFG1\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\joelg\CLionProjects\hwLFG1\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,33 @@ hwLFG1/fast:
 	$(MAKE) -f CMakeFiles\hwLFG1.dir\build.make CMakeFiles/hwLFG1.dir/build
 .PHONY : hwLFG1/fast
 
+lfgqueue.obj: lfgqueue.cpp.obj
+
+.PHONY : lfgqueue.obj
+
+# target to build an object file
+lfgqueue.cpp.obj:
+	$(MAKE) -f CMakeFiles\hwLFG1.dir\build.make CMakeFiles/hwLFG1.dir/lfgqueue.cpp.obj
+.PHONY : lfgqueue.cpp.obj
+
+lfgqueue.i: lfgqueue.cpp.i
+
+.PHONY : lfgqueue.i
+
+# target to preprocess a source file
+lfgqueue.cpp.i:
+	$(MAKE) -f CMakeFiles\hwLFG1.dir\build.make CMakeFiles/hwLFG1.dir/lfgqueue.cpp.i
+.PHONY : lfgqueue.cpp.i
+
+lfgqueue.s: lfgqueue.cpp.s
+
+.PHONY : lfgqueue.s
+
+# target to generate assembly for a file
+lfgqueue.cpp.s:
+	$(MAKE) -f CMakeFiles\hwLFG1.dir\build.make CMakeFiles/hwLFG1.dir/lfgqueue.cpp.s
+.PHONY : lfgqueue.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -149,6 +176,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\hwLFG1.dir\build.make CMakeFiles/hwLFG1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+player.obj: player.cpp.obj
+
+.PHONY : player.obj
+
+# target to build an object file
+player.cpp.obj:
+	$(MAKE) -f CMakeFiles\hwLFG1.dir\build.make CMakeFiles/hwLFG1.dir/player.cpp.obj
+.PHONY : player.cpp.obj
+
+player.i: player.cpp.i
+
+.PHONY : player.i
+
+# target to preprocess a source file
+player.cpp.i:
+	$(MAKE) -f CMakeFiles\hwLFG1.dir\build.make CMakeFiles/hwLFG1.dir/player.cpp.i
+.PHONY : player.cpp.i
+
+player.s: player.cpp.s
+
+.PHONY : player.s
+
+# target to generate assembly for a file
+player.cpp.s:
+	$(MAKE) -f CMakeFiles\hwLFG1.dir\build.make CMakeFiles/hwLFG1.dir/player.cpp.s
+.PHONY : player.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -158,9 +212,15 @@ help:
 	@echo ... hwLFG1
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... lfgqueue.obj
+	@echo ... lfgqueue.i
+	@echo ... lfgqueue.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... player.obj
+	@echo ... player.i
+	@echo ... player.s
 .PHONY : help
 
 

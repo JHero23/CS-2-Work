@@ -3,4 +3,4 @@ project(hwLFG1)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(hwLFG1 main.cpp)
+add_executable(hwLFG1 main.cpp player.cpp lfgqueue.cpp)

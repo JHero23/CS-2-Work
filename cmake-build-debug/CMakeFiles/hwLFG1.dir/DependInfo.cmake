@@ -4,7 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/tpc345/CLionProjects/hwLFG1/main.cpp" "C:/Users/tpc345/CLionProjects/hwLFG1/cmake-build-debug/CMakeFiles/hwLFG1.dir/main.cpp.obj"
+  "C:/Users/joelg/CLionProjects/hwLFG1/lfgqueue.cpp" "C:/Users/joelg/CLionProjects/hwLFG1/cmake-build-debug/CMakeFiles/hwLFG1.dir/lfgqueue.cpp.obj"
+  "C:/Users/joelg/CLionProjects/hwLFG1/main.cpp" "C:/Users/joelg/CLionProjects/hwLFG1/cmake-build-debug/CMakeFiles/hwLFG1.dir/main.cpp.obj"
+  "C:/Users/joelg/CLionProjects/hwLFG1/player.cpp" "C:/Users/joelg/CLionProjects/hwLFG1/cmake-build-debug/CMakeFiles/hwLFG1.dir/player.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
