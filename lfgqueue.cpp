@@ -7,12 +7,7 @@ using namespace std;
 
 // Constructs a new empty queue
 LFGQueue::LFGQueue() {
-    players = new Player*[3];
-
-    for (int i = 0; i < 3; i++) {
-        players[i] = nullptr;
-    }
-
+    players = nullptr;
     count = 0;
     capacity = 0;
 }
@@ -24,10 +19,23 @@ int LFGQueue::size() {
 
 // Pushes a pointer to a player onto the back of the queue.
 void LFGQueue::push_player(Player* p) {
-    for (int i = 2; i > 0; i--) {
-        players[i] = players[i-1];
+    if (count == capacity) {
+        // resize
+        if (capacity != 0) {
+            Player** new_players = new Player*[capacity + 1];
+
+            for (int i = 0; i < capacity; i++) {
+                new_players[i] = players[i - 1];
+            }
+
+            delete [] players;
+            players = new_players;
+            capacity *= 2;
+            return;
+        }
+        capacity = 1;
+        push_player(p);
     }
-    players[0] = p;
     count++;
 }
 
@@ -35,7 +43,13 @@ void LFGQueue::push_player(Player* p) {
 // with the specified role.
 // If no such player exists, returns nullptr.
 Player* LFGQueue::front_player(Player::Role r) {
+    for (int i = 0; i < count; i++) {
+        if (players[i]->role() == r) {
+            return players[i];
+        }
+    }
 
+    return nullptr;
 }
 
 // Removes the frontmost player with the specified role.
