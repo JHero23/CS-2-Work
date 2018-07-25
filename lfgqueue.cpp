@@ -20,23 +20,14 @@ int LFGQueue::size() {
 // Pushes a pointer to a player onto the back of the queue.
 void LFGQueue::push_player(Player* p) {
     if (count == capacity) {
-        // resize
-        if (capacity != 0) {
-            Player** new_players = new Player*[capacity + 1];
-
-            for (int i = 0; i < capacity; i++) {
-                new_players[i] = players[i - 1];
-            }
-
-            delete [] players;
-            players = new_players;
+        if (capacity == 0) {
+            capacity = 1;
+        } else {
             capacity *= 2;
-            return;
         }
-        capacity = 1;
-        push_player(p);
+
+
     }
-    count++;
 }
 
 // Returns a pointer to the frontmost player
