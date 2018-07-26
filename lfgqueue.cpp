@@ -1,15 +1,20 @@
 //
 // Created by tpc345 on 7/24/2018.
 //
+#include <iostream>
 #include "lfgqueue.h"
 
 using namespace std;
 
 // Constructs a new empty queue
 LFGQueue::LFGQueue() {
-    players = nullptr;
     count = 0;
-    capacity = 0;
+    capacity = 2;
+    players = new Player*[capacity];
+
+    for (int i = 0; i < capacity; i++) {
+        players[i] = nullptr;
+    }
 }
 
 // Returns the number of players in the queue.
@@ -20,29 +25,19 @@ int LFGQueue::size() {
 // Pushes a pointer to a player onto the back of the queue.
 void LFGQueue::push_player(Player* p) {
     if (count == capacity) {
-        switch (capacity) {
-            case 0:
-                capacity = 1;
-                break;
-            default:
-                capacity = capacity * 2;
-                break;
-        }
+        capacity *= 2;
 
-        Player** new_players = new Player*[capacity * 2];
+        Player** new_players = new Player*[capacity];
 
-        for (int i = capacity - 1; i > 0; i--) {
-            new_players[i] = players[i - 1];
+        for (int i = count - 1; i > -1; i--) {
+            new_players[i] = players[i];
         }
 
         delete players;
 
         players = new_players;
-
-        players[0] = p;
-    } else {
-        players[0] = p;
     }
+    players[count] = p;
     count++;
 }
 
@@ -50,6 +45,7 @@ void LFGQueue::push_player(Player* p) {
 // with the specified role.
 // If no such player exists, returns nullptr.
 Player* LFGQueue::front_player(Player::Role r) {
+    cout << "count = " << count << endl;
     for (int i = 0; i < count; i++) {
         if (players[i]->role() == r) {
             return players[i];
