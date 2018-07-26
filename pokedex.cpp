@@ -36,21 +36,18 @@ Pokemon::Pokemon(string summary) {
 //
 // Hint: check out the ostringstream class in <sstream>
 string Pokemon::summary() {
-    if (types[0] == types[1]) {
-        if (_ndex < 10) {
-            return _name + ", #00" + to_string(_ndex) + ", " + type_to_string(types[0]) + ",";
-        } else if (_ndex > 10 && _ndex < 100) {
-            return _name + ", #0" + to_string(_ndex) + ", " + type_to_string(types[0]) + ",";
-        }
-        return _name + ", #" + to_string(_ndex) + ", " + type_to_string(types[0]) + ",";
-    } else {
-        if (_ndex < 10) {
-            return _name + ", #00" + to_string(_ndex) + ", " + type_to_string(types[0]) + ", " + type_to_string(types[1]) + ",";
-        } else if (_ndex > 10 && _ndex < 100) {
-            return _name + ", #0" + to_string(_ndex) + ", " + type_to_string(types[0]) + ", " + type_to_string(types[1]) + ",";
-        }
+    ostringstream oss;
+
+    oss << name() << ", #";
+    oss.fill('0');
+    oss.width(3);
+    oss << Ndex() << ", " << type_to_string(types[0]) << ",";
+
+    if (types[0] != types[1]) {
+         oss << " " << type_to_string(types[1]) << ",";
     }
-    return _name + ", #" + to_string(_ndex) + ", " + type_to_string(types[0]) + ", " + type_to_string(types[1]) + ",";
+
+    return oss.str();
 }
 
 // Constructs an empty pokedex.
