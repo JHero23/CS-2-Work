@@ -29,11 +29,21 @@ void LFGQueue::push_player(Player* p) {
                 break;
         }
 
-        Player** new_players = new Player*[capacity];
+        Player** new_players = new Player*[capacity * 2];
 
+        for (int i = capacity - 1; i > 0; i--) {
+            new_players[i] = players[i - 1];
+        }
 
+        delete players;
 
+        players = new_players;
+
+        players[0] = p;
+    } else {
+        players[0] = p;
     }
+    count++;
 }
 
 // Returns a pointer to the frontmost player
