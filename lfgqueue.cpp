@@ -24,28 +24,36 @@ int LFGQueue::size() {
 
 // Pushes a pointer to a player onto the back of the queue.
 void LFGQueue::push_player(Player* p) {
+    cout << "PUSH" << endl;
     if (count == capacity) {
         capacity *= 2;
 
         Player** new_players = new Player*[capacity];
 
-        for (int i = count - 1; i > -1; i--) {
+        for (int i = 0; i < count; i++) {
             new_players[i] = players[i];
         }
 
-        delete players;
+        for (int i = count; i < capacity; i++) {
+            new_players[i] = nullptr;
+        }
 
+        delete players;
         players = new_players;
     }
     players[count] = p;
     count++;
+
+    for (int i = 0; i < count; i++) {
+        cout << i << ": " << players[i]->name() << "-" << players[i]->role() << endl;
+    }
+    cout << endl;
 }
 
 // Returns a pointer to the frontmost player
 // with the specified role.
 // If no such player exists, returns nullptr.
 Player* LFGQueue::front_player(Player::Role r) {
-    cout << "count = " << count << endl;
     for (int i = 0; i < count; i++) {
         if (players[i]->role() == r) {
             return players[i];
@@ -58,7 +66,24 @@ Player* LFGQueue::front_player(Player::Role r) {
 // Removes the frontmost player with the specified role.
 // If no such player exists, does nothing.
 void LFGQueue::pop_player(Player::Role r) {
-    return;
+    cout << "POP" << endl;
+    for (int i = 0; i < count; i++) {
+        if (players[i]->role() == r) {
+            players[i] = nullptr;
+            break;
+        }
+    }
+
+    for (int i = 0; i < count; i++) {
+        players[i] = players[i+1];
+        if (players[i] == nullptr) {
+            cout << i << ": NULL" << endl;
+        } else {
+            cout << i << " :" << players[i]->name() << "-" << players[i]->role() << endl;
+        }
+    }
+    count--;
+    cout << endl;
 }
 
 // Returns whether the queue contains a complete group
