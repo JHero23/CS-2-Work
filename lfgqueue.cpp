@@ -67,7 +67,7 @@ Player* LFGQueue::front_player(Player::Role r) {
 // Removes the frontmost player with the specified role.
 // If no such player exists, does nothing.
 void LFGQueue::pop_player(Player::Role r) {
-    cout << "POP" << endl;
+    // cout << "POP" << endl;
     int i = 0;
     for (i; i < count; i++) {
         if (players[i]->role() == r) {
@@ -128,6 +128,11 @@ bool LFGQueue::front_group(Player** group) {
 // then does nothing.
 void LFGQueue::pop_group() {
 
+    if (count > 2) {
+        pop_player(Player::Defender);
+        pop_player(Player::Hunter);
+        pop_player(Player::Bard);
+    }
 
     return;
 }
