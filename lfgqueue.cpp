@@ -9,7 +9,7 @@ using namespace std;
 // Constructs a new empty queue
 LFGQueue::LFGQueue() {
     count = 0;
-    capacity = 2;
+    capacity = 1;
     players = new Player*[capacity];
 
     for (int i = 0; i < capacity; i++) {
@@ -34,14 +34,22 @@ void LFGQueue::push_player(Player* p) {
             new_players[i] = players[i];
         }
 
-        for (int i = count; i < capacity; i++) {
-            new_players[i] = nullptr;
+        cout << "\tPUSH NEW_PLAYERS" << endl;
+
+        for (int i = 0; i < count; i++) {
+            cout << "\t" <<  i << ": " << new_players[i]->name() << "-" << new_players[i]->role() << endl;
         }
+
+        cout << endl;
 
         delete players;
         players = new_players;
+
+        for (int i = count - 1; i > 0; i--) {
+            players[i] = players[i-1];
+        }
     }
-    players[count] = p;
+    players[0] = p;
     count++;
 
     for (int i = 0; i < count; i++) {
@@ -82,6 +90,7 @@ void LFGQueue::pop_player(Player::Role r) {
             cout << i << " :" << players[i]->name() << "-" << players[i]->role() << endl;
         }
     }
+
     count--;
     cout << endl;
 }
