@@ -45,9 +45,10 @@ void LFGQueue::push_player(Player* p) {
     players[count] = p;
     count++;
 
-    /*for (int i = 0; i < count; i++) {
+    for (int i = 0; i < count; i++) {
         cout << i << ": " << players[i]->name() << "-" << players[i]->role() << endl;
-    }*/
+    }
+    cout << endl;
 }
 
 // Returns a pointer to the frontmost player
@@ -86,9 +87,8 @@ void LFGQueue::pop_player(Player::Role r) {
 
     if (i < count) {
         players[count - 1] = nullptr;
+        count--;
     }
-
-    count--;
     cout << endl;
 }
 
@@ -127,5 +127,7 @@ bool LFGQueue::front_group(Player** group) {
 // from the queue. If some role has no player with that role,
 // then does nothing.
 void LFGQueue::pop_group() {
+
+
     return;
 }
