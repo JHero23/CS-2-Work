@@ -30,8 +30,12 @@ void LFGQueue::push_player(Player* p) {
 
         Player** new_players = new Player*[capacity];
 
-        for (int i = count - 1; i > -1; i--) {
-            new_players[i] = players[i];
+        for (int i = 0; i < capacity; i++) {
+            if (i < count) {
+                new_players[i] = players[i];
+            } else {
+                new_players[i] = nullptr;
+            }
         }
 
         delete players;
@@ -41,9 +45,9 @@ void LFGQueue::push_player(Player* p) {
     players[count] = p;
     count++;
 
-    for (int i = 0; i < count; i++) {
+    /*for (int i = 0; i < count; i++) {
         cout << i << ": " << players[i]->name() << "-" << players[i]->role() << endl;
-    }
+    }*/
 }
 
 // Returns a pointer to the frontmost player
@@ -63,20 +67,25 @@ Player* LFGQueue::front_player(Player::Role r) {
 // If no such player exists, does nothing.
 void LFGQueue::pop_player(Player::Role r) {
     cout << "POP" << endl;
-    for (int i = 0; i < count; i++) {
+    int i = 0;
+    for (i; i < count; i++) {
         if (players[i]->role() == r) {
             players[i] = nullptr;
             break;
         }
     }
 
-    for (int i = 0; i < count; i++) {
+    for (i; i < count - 1; i++) {
         players[i] = players[i+1];
         if (players[i] == nullptr) {
             cout << i << ": NULL" << endl;
         } else {
             cout << i << " :" << players[i]->name() << "-" << players[i]->role() << endl;
         }
+    }
+
+    if (i < count) {
+        players[count - 1] = nullptr;
     }
 
     count--;
@@ -93,7 +102,25 @@ void LFGQueue::pop_player(Player::Role r) {
 // 2. Hunter (index 1)
 // 3. Bard (index 2)
 bool LFGQueue::front_group(Player** group) {
-    return false;
+    group[0] = front_player(Player::Defender);
+
+    if (group[0] == nullptr) {
+        return false;
+    }
+
+    group[1] = front_player(Player::Hunter);
+
+    if (group[1] == nullptr) {
+        return false;
+    }
+
+    group[2] = front_player(Player::Bard);
+
+    if (group[2] == nullptr) {
+        return false;
+    }
+
+    return true;
 }
 
 // Removes the frontmost Defender, Hunter, and Bard

@@ -47,10 +47,11 @@
           <file leaf-file-name="lfgqueue.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lfgqueue.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="68" selection-start-line="68" selection-end-line="68" />
+                <state relative-caret-position="273">
+                  <caret line="122" column="16" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
                   <folding>
                     <element signature="e#41#60#0" expanded="true" />
+                    <element signature="e#950#1079#0" />
                   </folding>
                 </state>
               </provider>
@@ -96,8 +97,8 @@
               <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/main.cpp">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="323">
-                      <caret line="77" selection-start-line="77" selection-end-line="77" />
+                    <state relative-caret-position="221">
+                      <caret line="157" selection-start-line="157" selection-end-line="157" />
                       <folding>
                         <element signature="e#1#19#0" expanded="true" />
                       </folding>
@@ -214,7 +215,8 @@
       <workItem from="1532542566541" duration="361000" />
       <workItem from="1532581953389" duration="1225000" />
       <workItem from="1532583857111" duration="269000" />
-      <workItem from="1532656578238" duration="3988000" />
+      <workItem from="1532656578238" duration="4465000" />
+      <workItem from="1532701172547" duration="4889000" />
     </task>
     <task id="LOCAL-00001" summary="Working on the functions.">
       <created>1532496993427</created>
@@ -251,14 +253,22 @@
       <option name="project" value="LOCAL" />
       <updated>1532650914793</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Working on the functions. Working on pop.">
+      <created>1532660658043</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1532660658043</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25277000" />
+    <option name="totallyTimeSpent" value="30643000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25375" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -282,25 +292,25 @@
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="CMake" order="12" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25375" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3285151" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="CMake" order="12" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3285151" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -315,43 +325,24 @@
     <MESSAGE value="Working on the functions." />
     <MESSAGE value="Working on the functions. Working on push and front." />
     <MESSAGE value="Working on the functions. Working on push." />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on the functions. Working on push." />
+    <MESSAGE value="Working on the functions. Working on pop." />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on the functions. Working on pop." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>78</line>
-          <option name="timeStamp" value="19" />
+          <line>77</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/lfgqueue.cpp</url>
-          <line>72</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/lfgqueue.cpp</url>
-          <line>64</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>57</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/lfgqueue.cpp</url>
-          <line>52</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/lfgqueue.cpp</url>
-          <line>27</line>
-          <option name="timeStamp" value="31" />
+          <line>68</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="32" />
+      <option name="time" value="35" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
@@ -419,6 +410,7 @@
           <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="e#41#60#0" expanded="true" />
+            <element signature="e#950#1079#0" />
           </folding>
         </state>
       </provider>
@@ -473,6 +465,7 @@
           <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="e#41#60#0" expanded="true" />
+            <element signature="e#950#1079#0" />
           </folding>
         </state>
       </provider>
@@ -710,6 +703,7 @@
           <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="e#41#60#0" expanded="true" />
+            <element signature="e#950#1079#0" />
           </folding>
         </state>
       </provider>
@@ -740,8 +734,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        <state relative-caret-position="221">
+          <caret line="157" selection-start-line="157" selection-end-line="157" />
           <folding>
             <element signature="e#1#19#0" expanded="true" />
           </folding>
@@ -750,10 +744,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lfgqueue.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="273">
+          <caret line="122" column="16" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
           <folding>
             <element signature="e#41#60#0" expanded="true" />
+            <element signature="e#950#1079#0" />
           </folding>
         </state>
       </provider>
