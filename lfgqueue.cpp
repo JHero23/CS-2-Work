@@ -30,32 +30,20 @@ void LFGQueue::push_player(Player* p) {
 
         Player** new_players = new Player*[capacity];
 
-        for (int i = 0; i < count; i++) {
+        for (int i = count - 1; i > -1; i--) {
             new_players[i] = players[i];
         }
 
-        cout << "\tPUSH NEW_PLAYERS" << endl;
-
-        for (int i = 0; i < count; i++) {
-            cout << "\t" <<  i << ": " << new_players[i]->name() << "-" << new_players[i]->role() << endl;
-        }
-
-        cout << endl;
-
         delete players;
-        players = new_players;
 
-        for (int i = count - 1; i > 0; i--) {
-            players[i] = players[i-1];
-        }
+        players = new_players;
     }
-    players[0] = p;
+    players[count] = p;
     count++;
 
     for (int i = 0; i < count; i++) {
         cout << i << ": " << players[i]->name() << "-" << players[i]->role() << endl;
     }
-    cout << endl;
 }
 
 // Returns a pointer to the frontmost player

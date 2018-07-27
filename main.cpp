@@ -36,25 +36,25 @@ int main()
     test(q.front_player(Player::Defender) == nullptr);
     test(q.front_player(Player::Hunter) == nullptr);
     test(q.front_player(Player::Bard) == nullptr);
-
+    // queue = [daniela-0]
     q.push_player(&daniela);
     test(q.size() == 1);
     test(q.front_player(Player::Defender) == &daniela);
     test(q.front_player(Player::Hunter) == nullptr);
     test(q.front_player(Player::Bard) == nullptr);
-
+    // queue = [hector-1, daniela-0]
     q.push_player(&hector);
     test(q.size() == 2);
     test(q.front_player(Player::Defender) == &daniela);
     test(q.front_player(Player::Hunter) == &hector);
     test(q.front_player(Player::Bard) == nullptr);
-
+    // queue = [berta-2, hector-1, daniela-0]
     q.push_player(&berta);
     test(q.size() == 3);
     test(q.front_player(Player::Defender) == &daniela);
     test(q.front_player(Player::Hunter) == &hector);
     test(q.front_player(Player::Bard) == &berta);
-
+    // queue = [hugo-
     q.push_player(&hugo);
     test(q.size() == 4);
     test(q.front_player(Player::Defender) == &daniela);
