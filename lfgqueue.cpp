@@ -24,7 +24,7 @@ int LFGQueue::size() {
 
 // Pushes a pointer to a player onto the back of the queue.
 void LFGQueue::push_player(Player* p) {
-    cout << "PUSH" << endl;
+    //cout << "PUSH" << endl;
     if (count == capacity) {
         capacity *= 2;
 
@@ -45,10 +45,10 @@ void LFGQueue::push_player(Player* p) {
     players[count] = p;
     count++;
 
-    for (int i = 0; i < count; i++) {
+    /*for (int i = 0; i < count; i++) {
         cout << i << ": " << players[i]->name() << "-" << players[i]->role() << endl;
     }
-    cout << endl;
+    cout << endl;*/
 }
 
 // Returns a pointer to the frontmost player
@@ -67,7 +67,7 @@ Player* LFGQueue::front_player(Player::Role r) {
 // Removes the frontmost player with the specified role.
 // If no such player exists, does nothing.
 void LFGQueue::pop_player(Player::Role r) {
-    // cout << "POP" << endl;
+    //cout << "POP" << endl;
     int i = 0;
     for (i; i < count; i++) {
         if (players[i]->role() == r) {
@@ -78,18 +78,18 @@ void LFGQueue::pop_player(Player::Role r) {
 
     for (i; i < count - 1; i++) {
         players[i] = players[i+1];
-        if (players[i] == nullptr) {
+        /*if (players[i] == nullptr) {
             cout << i << ": NULL" << endl;
         } else {
             cout << i << " :" << players[i]->name() << "-" << players[i]->role() << endl;
-        }
+        }*/
     }
 
     if (i < count) {
         players[count - 1] = nullptr;
         count--;
     }
-    cout << endl;
+    //cout << endl;
 }
 
 // Returns whether the queue contains a complete group
@@ -128,11 +128,11 @@ bool LFGQueue::front_group(Player** group) {
 // then does nothing.
 void LFGQueue::pop_group() {
 
-    if (count > 2) {
-        pop_player(Player::Defender);
-        pop_player(Player::Hunter);
-        pop_player(Player::Bard);
+    if (front_player(Player::Defender) == nullptr || front_player(Player::Hunter) == nullptr || front_player(Player::Bard) == nullptr) {
+        return;
     }
 
-    return;
+    pop_player(Player::Defender);
+    pop_player(Player::Hunter);
+    pop_player(Player::Bard);
 }
