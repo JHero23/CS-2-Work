@@ -8,7 +8,11 @@ using namespace std;
 // All of the methods are the same
 // as in hwLFG1.
 LFGQueue::LFGQueue() {
-
+    for (int i = 0; i < 3; i++) {
+        heads[i] = nullptr;
+        tails[i] = nullptr;
+        counts[i] = 0;
+    }
 }
 
 int LFGQueue::size() {
