@@ -127,12 +127,11 @@ bool LFGQueue::front_group(Player** group) {
 // from the queue. If some role has no player with that role,
 // then does nothing.
 void LFGQueue::pop_group() {
+    Player* group;
 
-    if (front_player(Player::Defender) == nullptr || front_player(Player::Hunter) == nullptr || front_player(Player::Bard) == nullptr) {
-        return;
+    if (front_group(&group)) {
+        pop_player(Player::Defender);
+        pop_player(Player::Hunter);
+        pop_player(Player::Bard);
     }
-
-    pop_player(Player::Defender);
-    pop_player(Player::Hunter);
-    pop_player(Player::Bard);
 }
