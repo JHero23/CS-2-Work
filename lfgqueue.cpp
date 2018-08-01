@@ -27,7 +27,6 @@ int LFGQueue::size() {
 }
 
 void LFGQueue::push_player(Player* p) {
-    // Check the role
     Node* player = new Node();
     player->p = p;
     player->next = nullptr;
@@ -35,10 +34,7 @@ void LFGQueue::push_player(Player* p) {
     if (size() == 0 || heads[p->role()] == nullptr) {
         heads[p->role()] = player;
     } else {
-        player->next = heads[p->role()];
-        heads[p->role()] = player;
         tails[p->role()]->next = player;
-        tails[p->role()] = player;
     }
 
     tails[p->role()] = player;
@@ -54,19 +50,42 @@ Player* LFGQueue::front_player(Player::Role r) {
 }
 
 void LFGQueue::pop_player(Player::Role r) {
-    if (r == 0) {
+    Node* temp = heads[r];
+    heads[r] = heads[r]->next;
 
-    } else if (r == 1) {
+    delete temp;
 
-    } else if (r == 2) {
-
-    }
+    counts[r]--;
 }
 
 bool LFGQueue::front_group(Player** group) {
-    return false;
+    group[0] = front_player(Player::Defender);
+
+    if (group[0] == nullptr) {
+        return false;
+    }
+
+    group[1] = front_player(Player::Hunter);
+
+    if (group[1] == nullptr) {
+        return false;
+    }
+
+    group[2] = front_player(Player::Bard);
+
+    if (group[2] == nullptr) {
+        return false;
+    }
+
+    return true;
 }
 
 void LFGQueue::pop_group() {
+    Player* group;
 
+    if (front_group(&group)) {
+        pop_player(Player::Defender);
+        pop_player(Player::Hunter);
+        pop_player(Player::Bard);
+    }
 }
