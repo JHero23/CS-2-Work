@@ -23,20 +23,21 @@ void BrowserHistory::go_to_url(string url) {
     website->url = url;
     website->next = website->prev = nullptr;
 
-    Node* cur = head;
-
-    while (cur != tail) {
-        cur = cur->next;
+    if (current != tail) {
+        Node* temp = tail;
+        while (temp != current) {
+            tail = tail->prev;
+            delete temp;
+            temp = tail;
+        }
     }
 
-
+    current->next = website;
+    website->prev = current;
     tail = website;
-    cur->next = website;
-    website->prev = cur;
-    website->next = tail;
-    current = website;
+    current = current->next;
 
-    int i = 0;
+    /*int i = 0;
     Node* temp = head;
     while (temp != tail) {
         cout << i << ": " << temp->url << endl;
@@ -44,12 +45,16 @@ void BrowserHistory::go_to_url(string url) {
         i++;
     }
 
-    cout << endl;
+    cout << i << ": " << temp->url << endl;
+    cout << endl;*/
 }
 
 // Moves back (into the past) by one url.
 void BrowserHistory::back() {
-    current = current->prev;
+    if (current->prev != nullptr) {
+        current = current->prev;
+    }
+    return;
 }
 
 // Returns whether there is a url in the past,
@@ -77,7 +82,10 @@ int BrowserHistory::past_url_count() {
 
 // Moves forward (into the future) by one url.
 void BrowserHistory::forward() {
-    current = current->next;
+    if (current->next != nullptr) {
+        current = current->next;
+    }
+    return;
 }
 
 // Returns whether there is a url in future,
