@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/joelg/CLionProjects/hwHIST2/browserhistory.cpp
+C:/Users/tpc345/CLionProjects/hwHIST2/browserhistory.cpp
 browserhistory.h
-C:/Users/joelg/CLionProjects/hwHIST2/browserhistory.h
+C:/Users/tpc345/CLionProjects/hwHIST2/browserhistory.h
 iostream
 -
 
-C:/Users/joelg/CLionProjects/hwHIST2/browserhistory.h
+C:/Users/tpc345/CLionProjects/hwHIST2/browserhistory.h
 string
 -
 stack
 -
 
-C:/Users/joelg/CLionProjects/hwHIST2/main.cpp
+C:/Users/tpc345/CLionProjects/hwHIST2/main.cpp
 iostream
 -
 browserhistory.h
-C:/Users/joelg/CLionProjects/hwHIST2/browserhistory.h
+C:/Users/tpc345/CLionProjects/hwHIST2/browserhistory.h
 

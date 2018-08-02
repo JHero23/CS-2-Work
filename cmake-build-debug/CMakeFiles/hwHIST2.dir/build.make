@@ -33,19 +33,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2018.1.6\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Users\tpc345\AppData\Roaming\JetBrains\CLion 2018.1.6\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2018.1.6\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "C:\Users\tpc345\AppData\Roaming\JetBrains\CLion 2018.1.6\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\joelg\CLionProjects\hwHIST2
+CMAKE_SOURCE_DIR = C:\Users\tpc345\CLionProjects\hwHIST2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\joelg\CLionProjects\hwHIST2\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\tpc345\CLionProjects\hwHIST2\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/hwHIST2.dir/depend.make
@@ -58,29 +58,29 @@ include CMakeFiles/hwHIST2.dir/flags.make
 
 CMakeFiles/hwHIST2.dir/main.cpp.obj: CMakeFiles/hwHIST2.dir/flags.make
 CMakeFiles/hwHIST2.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\joelg\CLionProjects\hwHIST2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hwHIST2.dir/main.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwHIST2.dir\main.cpp.obj -c C:\Users\joelg\CLionProjects\hwHIST2\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tpc345\CLionProjects\hwHIST2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hwHIST2.dir/main.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwHIST2.dir\main.cpp.obj -c C:\Users\tpc345\CLionProjects\hwHIST2\main.cpp
 
 CMakeFiles/hwHIST2.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hwHIST2.dir/main.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\joelg\CLionProjects\hwHIST2\main.cpp > CMakeFiles\hwHIST2.dir\main.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tpc345\CLionProjects\hwHIST2\main.cpp > CMakeFiles\hwHIST2.dir\main.cpp.i
 
 CMakeFiles/hwHIST2.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hwHIST2.dir/main.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\joelg\CLionProjects\hwHIST2\main.cpp -o CMakeFiles\hwHIST2.dir\main.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tpc345\CLionProjects\hwHIST2\main.cpp -o CMakeFiles\hwHIST2.dir\main.cpp.s
 
 CMakeFiles/hwHIST2.dir/browserhistory.cpp.obj: CMakeFiles/hwHIST2.dir/flags.make
 CMakeFiles/hwHIST2.dir/browserhistory.cpp.obj: ../browserhistory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\joelg\CLionProjects\hwHIST2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hwHIST2.dir/browserhistory.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwHIST2.dir\browserhistory.cpp.obj -c C:\Users\joelg\CLionProjects\hwHIST2\browserhistory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tpc345\CLionProjects\hwHIST2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hwHIST2.dir/browserhistory.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwHIST2.dir\browserhistory.cpp.obj -c C:\Users\tpc345\CLionProjects\hwHIST2\browserhistory.cpp
 
 CMakeFiles/hwHIST2.dir/browserhistory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hwHIST2.dir/browserhistory.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\joelg\CLionProjects\hwHIST2\browserhistory.cpp > CMakeFiles\hwHIST2.dir\browserhistory.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tpc345\CLionProjects\hwHIST2\browserhistory.cpp > CMakeFiles\hwHIST2.dir\browserhistory.cpp.i
 
 CMakeFiles/hwHIST2.dir/browserhistory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hwHIST2.dir/browserhistory.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\joelg\CLionProjects\hwHIST2\browserhistory.cpp -o CMakeFiles\hwHIST2.dir\browserhistory.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tpc345\CLionProjects\hwHIST2\browserhistory.cpp -o CMakeFiles\hwHIST2.dir\browserhistory.cpp.s
 
 # Object files for target hwHIST2
 hwHIST2_OBJECTS = \
@@ -96,7 +96,7 @@ hwHIST2.exe: CMakeFiles/hwHIST2.dir/build.make
 hwHIST2.exe: CMakeFiles/hwHIST2.dir/linklibs.rsp
 hwHIST2.exe: CMakeFiles/hwHIST2.dir/objects1.rsp
 hwHIST2.exe: CMakeFiles/hwHIST2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\joelg\CLionProjects\hwHIST2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable hwHIST2.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\tpc345\CLionProjects\hwHIST2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable hwHIST2.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\hwHIST2.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -109,6 +109,6 @@ CMakeFiles/hwHIST2.dir/clean:
 .PHONY : CMakeFiles/hwHIST2.dir/clean
 
 CMakeFiles/hwHIST2.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\joelg\CLionProjects\hwHIST2 C:\Users\joelg\CLionProjects\hwHIST2 C:\Users\joelg\CLionProjects\hwHIST2\cmake-build-debug C:\Users\joelg\CLionProjects\hwHIST2\cmake-build-debug C:\Users\joelg\CLionProjects\hwHIST2\cmake-build-debug\CMakeFiles\hwHIST2.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\tpc345\CLionProjects\hwHIST2 C:\Users\tpc345\CLionProjects\hwHIST2 C:\Users\tpc345\CLionProjects\hwHIST2\cmake-build-debug C:\Users\tpc345\CLionProjects\hwHIST2\cmake-build-debug C:\Users\tpc345\CLionProjects\hwHIST2\cmake-build-debug\CMakeFiles\hwHIST2.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/hwHIST2.dir/depend
 

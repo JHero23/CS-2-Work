@@ -5,7 +5,7 @@
 //
 // Creates a new browser history with only one page visited: default_url
 BrowserHistory::BrowserHistory(string default_url) {
-    head = tail = current = new Node;
+    head = tail = current = new Node();
     current->url = default_url;
     current->next = current->prev = nullptr;
     head = tail = current;
@@ -23,13 +23,11 @@ void BrowserHistory::go_to_url(string url) {
     website->url = url;
     website->next = website->prev = nullptr;
 
-    if (current != tail) {
-        Node* temp = tail;
-        while (temp != current) {
-            tail = tail->prev;
-            delete temp;
-            temp = tail;
-        }
+    Node* temp = tail;
+    while (temp != current) {
+        tail = tail->prev;
+        delete temp;
+        temp = tail;
     }
 
     current->next = website;
