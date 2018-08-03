@@ -6,8 +6,9 @@ Do not copy this assignment as this is for only educational puproses only and gr
 
 ## Assignment
 The purpose of this assignment is to experiment and practice basic Computer Science and Engineering fundmanetals. Such fundamentals include:
-- Object Oriented Programming
-- Linked List Data Structure.
+- Object Oriented Programming.
+- Singly Linked List Data Structure.
+- Arrays.
 
 ### Acknowledgements
 [Andrew Winslow](https://github.com/andrewwinslow) for allowing me to practice on his homework assignments, supplying main.cpp, lfgqueue.h, player.h, and player.cpp to further my studies as a Computer Engineer.
