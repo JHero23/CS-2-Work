@@ -33,19 +33,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2018.1.6\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Users\tpc345\AppData\Roaming\JetBrains\CLion 2018.1.6\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2018.1.6\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "C:\Users\tpc345\AppData\Roaming\JetBrains\CLion 2018.1.6\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\joelg\CLionProjects\hwPW
+CMAKE_SOURCE_DIR = C:\Users\tpc345\CLionProjects\hwPW
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\joelg\CLionProjects\hwPW\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\tpc345\CLionProjects\hwPW\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/hwPW.dir/depend.make
@@ -58,42 +58,42 @@ include CMakeFiles/hwPW.dir/flags.make
 
 CMakeFiles/hwPW.dir/main.cpp.obj: CMakeFiles/hwPW.dir/flags.make
 CMakeFiles/hwPW.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\joelg\CLionProjects\hwPW\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hwPW.dir/main.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwPW.dir\main.cpp.obj -c C:\Users\joelg\CLionProjects\hwPW\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tpc345\CLionProjects\hwPW\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hwPW.dir/main.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwPW.dir\main.cpp.obj -c C:\Users\tpc345\CLionProjects\hwPW\main.cpp
 
 CMakeFiles/hwPW.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hwPW.dir/main.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\joelg\CLionProjects\hwPW\main.cpp > CMakeFiles\hwPW.dir\main.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tpc345\CLionProjects\hwPW\main.cpp > CMakeFiles\hwPW.dir\main.cpp.i
 
 CMakeFiles/hwPW.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hwPW.dir/main.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\joelg\CLionProjects\hwPW\main.cpp -o CMakeFiles\hwPW.dir\main.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tpc345\CLionProjects\hwPW\main.cpp -o CMakeFiles\hwPW.dir\main.cpp.s
 
 CMakeFiles/hwPW.dir/evilcomputer.cpp.obj: CMakeFiles/hwPW.dir/flags.make
 CMakeFiles/hwPW.dir/evilcomputer.cpp.obj: ../evilcomputer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\joelg\CLionProjects\hwPW\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hwPW.dir/evilcomputer.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwPW.dir\evilcomputer.cpp.obj -c C:\Users\joelg\CLionProjects\hwPW\evilcomputer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tpc345\CLionProjects\hwPW\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hwPW.dir/evilcomputer.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwPW.dir\evilcomputer.cpp.obj -c C:\Users\tpc345\CLionProjects\hwPW\evilcomputer.cpp
 
 CMakeFiles/hwPW.dir/evilcomputer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hwPW.dir/evilcomputer.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\joelg\CLionProjects\hwPW\evilcomputer.cpp > CMakeFiles\hwPW.dir\evilcomputer.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tpc345\CLionProjects\hwPW\evilcomputer.cpp > CMakeFiles\hwPW.dir\evilcomputer.cpp.i
 
 CMakeFiles/hwPW.dir/evilcomputer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hwPW.dir/evilcomputer.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\joelg\CLionProjects\hwPW\evilcomputer.cpp -o CMakeFiles\hwPW.dir\evilcomputer.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tpc345\CLionProjects\hwPW\evilcomputer.cpp -o CMakeFiles\hwPW.dir\evilcomputer.cpp.s
 
 CMakeFiles/hwPW.dir/hack.cpp.obj: CMakeFiles/hwPW.dir/flags.make
 CMakeFiles/hwPW.dir/hack.cpp.obj: ../hack.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\joelg\CLionProjects\hwPW\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hwPW.dir/hack.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwPW.dir\hack.cpp.obj -c C:\Users\joelg\CLionProjects\hwPW\hack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tpc345\CLionProjects\hwPW\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hwPW.dir/hack.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwPW.dir\hack.cpp.obj -c C:\Users\tpc345\CLionProjects\hwPW\hack.cpp
 
 CMakeFiles/hwPW.dir/hack.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hwPW.dir/hack.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\joelg\CLionProjects\hwPW\hack.cpp > CMakeFiles\hwPW.dir\hack.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tpc345\CLionProjects\hwPW\hack.cpp > CMakeFiles\hwPW.dir\hack.cpp.i
 
 CMakeFiles/hwPW.dir/hack.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hwPW.dir/hack.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\joelg\CLionProjects\hwPW\hack.cpp -o CMakeFiles\hwPW.dir\hack.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tpc345\CLionProjects\hwPW\hack.cpp -o CMakeFiles\hwPW.dir\hack.cpp.s
 
 # Object files for target hwPW
 hwPW_OBJECTS = \
@@ -111,7 +111,7 @@ hwPW.exe: CMakeFiles/hwPW.dir/build.make
 hwPW.exe: CMakeFiles/hwPW.dir/linklibs.rsp
 hwPW.exe: CMakeFiles/hwPW.dir/objects1.rsp
 hwPW.exe: CMakeFiles/hwPW.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\joelg\CLionProjects\hwPW\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable hwPW.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\tpc345\CLionProjects\hwPW\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable hwPW.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\hwPW.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -124,6 +124,6 @@ CMakeFiles/hwPW.dir/clean:
 .PHONY : CMakeFiles/hwPW.dir/clean
 
 CMakeFiles/hwPW.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\joelg\CLionProjects\hwPW C:\Users\joelg\CLionProjects\hwPW C:\Users\joelg\CLionProjects\hwPW\cmake-build-debug C:\Users\joelg\CLionProjects\hwPW\cmake-build-debug C:\Users\joelg\CLionProjects\hwPW\cmake-build-debug\CMakeFiles\hwPW.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\tpc345\CLionProjects\hwPW C:\Users\tpc345\CLionProjects\hwPW C:\Users\tpc345\CLionProjects\hwPW\cmake-build-debug C:\Users\tpc345\CLionProjects\hwPW\cmake-build-debug C:\Users\tpc345\CLionProjects\hwPW\cmake-build-debug\CMakeFiles\hwPW.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/hwPW.dir/depend
 

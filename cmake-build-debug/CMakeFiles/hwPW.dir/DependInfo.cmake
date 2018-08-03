@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/joelg/CLionProjects/hwPW/evilcomputer.cpp" "C:/Users/joelg/CLionProjects/hwPW/cmake-build-debug/CMakeFiles/hwPW.dir/evilcomputer.cpp.obj"
-  "C:/Users/joelg/CLionProjects/hwPW/hack.cpp" "C:/Users/joelg/CLionProjects/hwPW/cmake-build-debug/CMakeFiles/hwPW.dir/hack.cpp.obj"
-  "C:/Users/joelg/CLionProjects/hwPW/main.cpp" "C:/Users/joelg/CLionProjects/hwPW/cmake-build-debug/CMakeFiles/hwPW.dir/main.cpp.obj"
+  "C:/Users/tpc345/CLionProjects/hwPW/evilcomputer.cpp" "C:/Users/tpc345/CLionProjects/hwPW/cmake-build-debug/CMakeFiles/hwPW.dir/evilcomputer.cpp.obj"
+  "C:/Users/tpc345/CLionProjects/hwPW/hack.cpp" "C:/Users/tpc345/CLionProjects/hwPW/cmake-build-debug/CMakeFiles/hwPW.dir/hack.cpp.obj"
+  "C:/Users/tpc345/CLionProjects/hwPW/main.cpp" "C:/Users/tpc345/CLionProjects/hwPW/cmake-build-debug/CMakeFiles/hwPW.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
