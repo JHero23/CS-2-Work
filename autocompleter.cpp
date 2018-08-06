@@ -7,9 +7,11 @@ using namespace std;
 
 // Creates a new, empty autocompleter.
 Autocompleter::Autocompleter() {
-    A = nullptr;
     count = 0;
-    capacity = 0;
+    capacity = 1;
+    for (int i = 0; i < capacity; i++) {
+        A[i] = nullptr;
+    }
 }
 
 // Adds x to the list of potential suggestions in the Autocompleter.
