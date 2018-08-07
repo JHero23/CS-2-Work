@@ -36,15 +36,49 @@ void Autocompleter::insert(string x) {
         A = new_A;
     }
 
+    A[count] = x;
+    count++;
+
+    for (int i = 0; i < capacity; ++i) {
+        int j = i;
+        while (j > 0 && A[j] < A[j-1] && (A[j] != "" && A[j-1] != "")) {
+            swap(A[j], A[j-1]);
+            --j;
+        }
+    }
+
+    for (int i = 0; i < capacity; i++) {
+        cout << i << ": " << A[i] << endl;
+    }
+    cout << endl;
+
+    /*if (count == capacity) {
+        capacity = 1;
+        capacity *= 2;
+        string *new_A = new string[capacity];
+
+        for (int i = 0; i < capacity; i++) {
+            if (i < count) {
+                new_A[i] = A[i];
+            } else {
+                new_A[i] = "";
+            }
+        }
+
+        delete A;
+        A = new_A;
+    }
+
     int index = index_of(x, A, capacity);
+
     if (A[index] == x) {
+        cout << "Its already there" << endl;
         return;
     }
 
     A[count] = x;
     count++;
 
-    // Reorder the array to restore sortedness (via swapping the new element towards the front of the array as far as necessary, as done in insertion sort).
     for (int i = 0; i < capacity; ++i)
     {
         int j = i;
@@ -58,6 +92,7 @@ void Autocompleter::insert(string x) {
     for (int i = 0; i < count; i++) {
         cout << A[i] << endl;
     }
+    cout << endl;*/
 }
 
 // Returns the number of strings in the Autocompleter.
