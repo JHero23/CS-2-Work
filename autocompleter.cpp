@@ -2,7 +2,7 @@
 // Created by tpc345 on 8/3/2018.
 //
 #include "autocompleter.h"
-
+#include <iostream>
 using namespace std;
 
 // Creates a new, empty autocompleter.
@@ -11,7 +11,7 @@ Autocompleter::Autocompleter() {
     capacity = 1;
     A = new string[capacity];
     for (int i = 0; i < capacity; i++) {
-        A[i] = nullptr;
+        A[i] = "";
     }
 }
 
@@ -20,31 +20,44 @@ Autocompleter::Autocompleter() {
 //
 // Must run in O(n) time.
 void Autocompleter::insert(string x) {
-    int index = index_of(x, A, capacity);
+    if (count == capacity) {
+        capacity *= 2;
+        string *new_A = new string[capacity];
 
-    if (A[index] == x) {
-        return;
-    } else {
-        if (count == capacity) {
-            capacity *= 2;
-            string* new_A = new string[capacity];
-
-            for (int i = 0; i < capacity; i++) {
-                if (i < count) {
-                    new_A[i] = A[i];
-                } else {
-                    new_A[i] = nullptr;
-                }
+        for (int i = 0; i < capacity; i++) {
+            if (i < count) {
+                new_A[i] = A[i];
+            } else {
+                new_A[i] = "";
             }
-
-            delete A;
-            A = new_A;
         }
+
+        delete A;
+        A = new_A;
     }
 
+    int index = index_of(x, A, capacity);
+    if (A[index] == x) {
+        return;
+    }
 
     A[count] = x;
     count++;
+
+    // Reorder the array to restore sortedness (via swapping the new element towards the front of the array as far as necessary, as done in insertion sort).
+    for (int i = 0; i < capacity; ++i)
+    {
+        int j = i;
+        while (j > 0 && A[j] < A[j-1])
+        {
+            swap(A[j], A[j-1]);
+            --j;
+        }
+    }
+
+    for (int i = 0; i < count; i++) {
+        cout << A[i] << endl;
+    }
 }
 
 // Returns the number of strings in the Autocompleter.
@@ -86,6 +99,7 @@ int Autocompleter::index_of(string x, string *A, int n) {
 
     l = 0;
     r = n - 1;
+
     while (l <= r)
     {
         m = (l + r) / 2;
@@ -99,6 +113,4 @@ int Autocompleter::index_of(string x, string *A, int n) {
         else if (A[m] > x)
             r = m - 1;
     }
-
-    return m;
 }
