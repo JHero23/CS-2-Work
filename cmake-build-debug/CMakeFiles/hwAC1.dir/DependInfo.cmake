@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/tpc345/CLionProjects/hwAC1/autocompleter.cpp" "C:/Users/tpc345/CLionProjects/hwAC1/cmake-build-debug/CMakeFiles/hwAC1.dir/autocompleter.cpp.obj"
-  "C:/Users/tpc345/CLionProjects/hwAC1/main.cpp" "C:/Users/tpc345/CLionProjects/hwAC1/cmake-build-debug/CMakeFiles/hwAC1.dir/main.cpp.obj"
+  "C:/Users/joelg/CLionProjects/hwAC1/autocompleter.cpp" "C:/Users/joelg/CLionProjects/hwAC1/cmake-build-debug/CMakeFiles/hwAC1.dir/autocompleter.cpp.obj"
+  "C:/Users/joelg/CLionProjects/hwAC1/main.cpp" "C:/Users/joelg/CLionProjects/hwAC1/cmake-build-debug/CMakeFiles/hwAC1.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
