@@ -36,6 +36,12 @@ void Autocompleter::insert(string x) {
         A = new_A;
     }
 
+    int index = index_of(x, A, capacity);
+
+    if (A[index] == x) {
+        return;
+    }
+
     A[count] = x;
     count++;
 
@@ -46,53 +52,6 @@ void Autocompleter::insert(string x) {
             --j;
         }
     }
-
-    for (int i = 0; i < capacity; i++) {
-        cout << i << ": " << A[i] << endl;
-    }
-    cout << endl;
-
-    /*if (count == capacity) {
-        capacity = 1;
-        capacity *= 2;
-        string *new_A = new string[capacity];
-
-        for (int i = 0; i < capacity; i++) {
-            if (i < count) {
-                new_A[i] = A[i];
-            } else {
-                new_A[i] = "";
-            }
-        }
-
-        delete A;
-        A = new_A;
-    }
-
-    int index = index_of(x, A, capacity);
-
-    if (A[index] == x) {
-        cout << "Its already there" << endl;
-        return;
-    }
-
-    A[count] = x;
-    count++;
-
-    for (int i = 0; i < capacity; ++i)
-    {
-        int j = i;
-        while (j > 0 && A[j] < A[j-1])
-        {
-            swap(A[j], A[j-1]);
-            --j;
-        }
-    }
-
-    for (int i = 0; i < count; i++) {
-        cout << A[i] << endl;
-    }
-    cout << endl;*/
 }
 
 // Returns the number of strings in the Autocompleter.
@@ -105,7 +64,19 @@ int Autocompleter::size() {
 //
 // Must run in O(log(n)) time.
 int Autocompleter::completion_count(string x) {
+    int comp_count = 0;
 
+    if (x == "") {
+        return count;
+    } else {
+        string temp = x;
+        temp[temp.length() - 1]++;
+        int min = index_of(x, A, count);
+        int max = index_of(temp, A, count);
+        comp_count = max - min;
+    }
+
+    return comp_count;
 }
 
 // Takes a string (named x) and string array of length 5 (named suggestions)
@@ -118,7 +89,29 @@ int Autocompleter::completion_count(string x) {
 //
 // Must run in O(log(n)) time.
 void Autocompleter::completions(string x, string* suggestions) {
+    int size = count;
 
+    if (x == "") {
+        if (size > 5) {
+            size = 5;
+        }
+        for (int i = 0; i < size; i++) {
+            suggestions[i] = A[i];
+        }
+    } else {
+        int comp_count = completion_count(x);
+        int min = index_of(x, A, count);
+
+        for (int i = 0; i < 5; i++) {
+            if (i < comp_count) {
+                suggestions[i] = A[min];
+                min++;
+            } else {
+                suggestions[i] = "";
+            }
+
+        }
+    }
 }
 
 // Optional helper method.

@@ -33,19 +33,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2018.1.6\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Users\tpc345\AppData\Roaming\JetBrains\CLion 2018.1.6\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2018.1.6\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "C:\Users\tpc345\AppData\Roaming\JetBrains\CLion 2018.1.6\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\joelg\CLionProjects\hwAC1
+CMAKE_SOURCE_DIR = C:\Users\tpc345\CLionProjects\hwAC1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\joelg\CLionProjects\hwAC1\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\tpc345\CLionProjects\hwAC1\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/hwAC1.dir/depend.make
@@ -58,29 +58,29 @@ include CMakeFiles/hwAC1.dir/flags.make
 
 CMakeFiles/hwAC1.dir/main.cpp.obj: CMakeFiles/hwAC1.dir/flags.make
 CMakeFiles/hwAC1.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\joelg\CLionProjects\hwAC1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hwAC1.dir/main.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwAC1.dir\main.cpp.obj -c C:\Users\joelg\CLionProjects\hwAC1\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tpc345\CLionProjects\hwAC1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hwAC1.dir/main.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwAC1.dir\main.cpp.obj -c C:\Users\tpc345\CLionProjects\hwAC1\main.cpp
 
 CMakeFiles/hwAC1.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hwAC1.dir/main.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\joelg\CLionProjects\hwAC1\main.cpp > CMakeFiles\hwAC1.dir\main.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tpc345\CLionProjects\hwAC1\main.cpp > CMakeFiles\hwAC1.dir\main.cpp.i
 
 CMakeFiles/hwAC1.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hwAC1.dir/main.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\joelg\CLionProjects\hwAC1\main.cpp -o CMakeFiles\hwAC1.dir\main.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tpc345\CLionProjects\hwAC1\main.cpp -o CMakeFiles\hwAC1.dir\main.cpp.s
 
 CMakeFiles/hwAC1.dir/autocompleter.cpp.obj: CMakeFiles/hwAC1.dir/flags.make
 CMakeFiles/hwAC1.dir/autocompleter.cpp.obj: ../autocompleter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\joelg\CLionProjects\hwAC1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hwAC1.dir/autocompleter.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwAC1.dir\autocompleter.cpp.obj -c C:\Users\joelg\CLionProjects\hwAC1\autocompleter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tpc345\CLionProjects\hwAC1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hwAC1.dir/autocompleter.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwAC1.dir\autocompleter.cpp.obj -c C:\Users\tpc345\CLionProjects\hwAC1\autocompleter.cpp
 
 CMakeFiles/hwAC1.dir/autocompleter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hwAC1.dir/autocompleter.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\joelg\CLionProjects\hwAC1\autocompleter.cpp > CMakeFiles\hwAC1.dir\autocompleter.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tpc345\CLionProjects\hwAC1\autocompleter.cpp > CMakeFiles\hwAC1.dir\autocompleter.cpp.i
 
 CMakeFiles/hwAC1.dir/autocompleter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hwAC1.dir/autocompleter.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\joelg\CLionProjects\hwAC1\autocompleter.cpp -o CMakeFiles\hwAC1.dir\autocompleter.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tpc345\CLionProjects\hwAC1\autocompleter.cpp -o CMakeFiles\hwAC1.dir\autocompleter.cpp.s
 
 # Object files for target hwAC1
 hwAC1_OBJECTS = \
@@ -96,7 +96,7 @@ hwAC1.exe: CMakeFiles/hwAC1.dir/build.make
 hwAC1.exe: CMakeFiles/hwAC1.dir/linklibs.rsp
 hwAC1.exe: CMakeFiles/hwAC1.dir/objects1.rsp
 hwAC1.exe: CMakeFiles/hwAC1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\joelg\CLionProjects\hwAC1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable hwAC1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\tpc345\CLionProjects\hwAC1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable hwAC1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\hwAC1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -109,6 +109,6 @@ CMakeFiles/hwAC1.dir/clean:
 .PHONY : CMakeFiles/hwAC1.dir/clean
 
 CMakeFiles/hwAC1.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\joelg\CLionProjects\hwAC1 C:\Users\joelg\CLionProjects\hwAC1 C:\Users\joelg\CLionProjects\hwAC1\cmake-build-debug C:\Users\joelg\CLionProjects\hwAC1\cmake-build-debug C:\Users\joelg\CLionProjects\hwAC1\cmake-build-debug\CMakeFiles\hwAC1.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\tpc345\CLionProjects\hwAC1 C:\Users\tpc345\CLionProjects\hwAC1 C:\Users\tpc345\CLionProjects\hwAC1\cmake-build-debug C:\Users\tpc345\CLionProjects\hwAC1\cmake-build-debug C:\Users\tpc345\CLionProjects\hwAC1\cmake-build-debug\CMakeFiles\hwAC1.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/hwAC1.dir/depend
 
