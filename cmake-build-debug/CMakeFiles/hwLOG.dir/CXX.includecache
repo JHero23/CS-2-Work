@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/tpc345/CLionProjects/hwLOG/loginserver.cpp
+loginserver.h
+C:/Users/tpc345/CLionProjects/hwLOG/loginserver.h
+
+C:/Users/tpc345/CLionProjects/hwLOG/loginserver.h
+string
+-
+unordered_set
+-
+unordered_map
+-
+
