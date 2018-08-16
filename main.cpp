@@ -63,7 +63,7 @@ int main()
     // Uncomment line below to use your Autocompleter interactively.
     // Enter a string and press Enter - the autocompletions
     // results from 100000 common words are printed.
-    // 
+    //
     // interactive_mode();
 
 

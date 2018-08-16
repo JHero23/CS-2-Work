@@ -13,8 +13,6 @@ Autocompleter::Autocompleter() {
 // a.k.a. add()
 void Autocompleter::insert(string x) {
     Node* n = new Node(x);
-    int left = 0;
-    int right = 0;
 
     if (root == nullptr) {
         root = n;
@@ -25,17 +23,15 @@ void Autocompleter::insert(string x) {
                 return;
             }
 
-            if (temp->s < x) {
+            if (temp->s > x) {
                 if (temp->left == nullptr) {
                     temp->left = n;
-                    break;
                 } else {
                     temp = temp->left;
                 }
-            } else if (temp->s > x) {
+            } else if (temp->s < x) {
                 if (temp->right == nullptr) {
                     temp->right = n;
-                    break;
                 } else {
                     temp = temp->right;
                 }
@@ -50,6 +46,12 @@ int Autocompleter::size() {
 }
 
 void Autocompleter::completions(string x, string* suggestions) {
+    int _size = 5;
+
+    for (int i = 0; i < _size; i++) {
+        suggestions[i] = "";
+    }
+
     completions_recurse(x, suggestions, root);
 }
 
@@ -77,30 +79,25 @@ int Autocompleter::size_recurse(Node* root) {
 // -If right subtree can contain strings that start with x,
 //  recurse on right subtree.
 void Autocompleter::completions_recurse(string x, string* suggestions, Node* root) {
-    int _size = size();
-    int i = 0;
-
-    if (_size > 5) {
-        _size = 5;
-    }
+    int _size = 5;
 
     if (root == nullptr || suggestions[4] != "") {
         return;
-    } else {
-        string subs = root->s.substr(0, x.length());
-        if (root->left != nullptr) {
-            if (root->left->s.substr(0, x.length()) == x) {
-                completions_recurse(x, suggestions, root->left);
+    }
+
+    string subs = root->s.substr(0, x.length());
+    if (subs >= x) {
+        completions_recurse(x, suggestions, root->left);
+    }
+    if (subs == x) {
+        for (int i = 0; i < _size; i++) {
+            if (suggestions[i] == "") {
+                suggestions[i] = root->s;
+                break;
             }
         }
-        while (subs == x) {
-            suggestions[i] = root->s;
-            i++;
-        }
-        if (root->right != nullptr) {
-            if (root->right->s.substr(0, x.length()) == x) {
-                completions_recurse(x, suggestions, root->right);
-            }
-        }
+    }
+    if (subs <= x){
+        completions_recurse(x, suggestions, root->right);
     }
 }

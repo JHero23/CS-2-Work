@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/tpc345/CLionProjects/hwAC2/autocompleter.cpp
+autocompleter.h
+C:/Users/tpc345/CLionProjects/hwAC2/autocompleter.h
+
+C:/Users/tpc345/CLionProjects/hwAC2/autocompleter.h
+string
+-
+
+C:/Users/tpc345/CLionProjects/hwAC2/main.cpp
+iostream
+-
+fstream
+-
+cassert
+-
+string
+-
+autocompleter.h
+C:/Users/tpc345/CLionProjects/hwAC2/autocompleter.h
+
