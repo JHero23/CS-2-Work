@@ -78,32 +78,29 @@ int Autocompleter::size_recurse(Node* root) {
 //  recurse on right subtree.
 void Autocompleter::completions_recurse(string x, string* suggestions, Node* root) {
     int _size = size();
+    int i = 0;
 
-    if (root == nullptr) {
-        return;
-    } else if (suggestions[4] != "") {
-        return;
-    } else {
-        string temp_s = x;
-
-        if (_size > 5) {
-            _size = 5;
-        }
-
-        string subs = root->s.substr(0, x.length());
-        int i = 0;
-        do {
-            if (suggestions[i] != "") {
-                i++;
-            } else {
-                break;
-            }
-        } while (i < _size);
-        if (subs == x) {
-            suggestions[i] = root->s;
-        }
-        completions_recurse(x, suggestions, root->left);
-        completions_recurse(x, suggestions, root->right);
+    if (_size > 5) {
+        _size = 5;
     }
 
+    if (root == nullptr || suggestions[4] != "") {
+        return;
+    } else {
+        string subs = root->s.substr(0, x.length());
+        if (root->left != nullptr) {
+            if (root->left->s.substr(0, x.length()) == x) {
+                completions_recurse(x, suggestions, root->left);
+            }
+        }
+        while (subs == x) {
+            suggestions[i] = root->s;
+            i++;
+        }
+        if (root->right != nullptr) {
+            if (root->right->s.substr(0, x.length()) == x) {
+                completions_recurse(x, suggestions, root->right);
+            }
+        }
+    }
 }
