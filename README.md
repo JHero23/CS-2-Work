@@ -10,6 +10,9 @@ The purpose of this assignment is to experiment and practice basic Computer Scie
 - Strings, File I/O.
 - Array Based Data Structures.
 
+## Description
+This program is an advance version of the homework pokemon, where instead of taking items and making different objects, we place the objects inside a dynamic array, simulating a pokedex filled with pokemon.
+
 ## Note
 This assignment works differently in different IDEs. This program was tested and programmed in JetBrains CLion.
 
