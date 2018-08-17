@@ -33,19 +33,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2018.1.6\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Users\tpc345\AppData\Roaming\JetBrains\CLion 2018.1.6\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2018.1.6\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "C:\Users\tpc345\AppData\Roaming\JetBrains\CLion 2018.1.6\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\joelg\CLionProjects\hwLFG1
+CMAKE_SOURCE_DIR = C:\Users\tpc345\CLionProjects\hwLFG1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\joelg\CLionProjects\hwLFG1\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\tpc345\CLionProjects\hwLFG1\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/hwLFG1.dir/depend.make
@@ -58,42 +58,42 @@ include CMakeFiles/hwLFG1.dir/flags.make
 
 CMakeFiles/hwLFG1.dir/main.cpp.obj: CMakeFiles/hwLFG1.dir/flags.make
 CMakeFiles/hwLFG1.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\joelg\CLionProjects\hwLFG1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hwLFG1.dir/main.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwLFG1.dir\main.cpp.obj -c C:\Users\joelg\CLionProjects\hwLFG1\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tpc345\CLionProjects\hwLFG1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hwLFG1.dir/main.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwLFG1.dir\main.cpp.obj -c C:\Users\tpc345\CLionProjects\hwLFG1\main.cpp
 
 CMakeFiles/hwLFG1.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hwLFG1.dir/main.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\joelg\CLionProjects\hwLFG1\main.cpp > CMakeFiles\hwLFG1.dir\main.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tpc345\CLionProjects\hwLFG1\main.cpp > CMakeFiles\hwLFG1.dir\main.cpp.i
 
 CMakeFiles/hwLFG1.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hwLFG1.dir/main.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\joelg\CLionProjects\hwLFG1\main.cpp -o CMakeFiles\hwLFG1.dir\main.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tpc345\CLionProjects\hwLFG1\main.cpp -o CMakeFiles\hwLFG1.dir\main.cpp.s
 
 CMakeFiles/hwLFG1.dir/player.cpp.obj: CMakeFiles/hwLFG1.dir/flags.make
 CMakeFiles/hwLFG1.dir/player.cpp.obj: ../player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\joelg\CLionProjects\hwLFG1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hwLFG1.dir/player.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwLFG1.dir\player.cpp.obj -c C:\Users\joelg\CLionProjects\hwLFG1\player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tpc345\CLionProjects\hwLFG1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hwLFG1.dir/player.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwLFG1.dir\player.cpp.obj -c C:\Users\tpc345\CLionProjects\hwLFG1\player.cpp
 
 CMakeFiles/hwLFG1.dir/player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hwLFG1.dir/player.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\joelg\CLionProjects\hwLFG1\player.cpp > CMakeFiles\hwLFG1.dir\player.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tpc345\CLionProjects\hwLFG1\player.cpp > CMakeFiles\hwLFG1.dir\player.cpp.i
 
 CMakeFiles/hwLFG1.dir/player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hwLFG1.dir/player.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\joelg\CLionProjects\hwLFG1\player.cpp -o CMakeFiles\hwLFG1.dir\player.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tpc345\CLionProjects\hwLFG1\player.cpp -o CMakeFiles\hwLFG1.dir\player.cpp.s
 
 CMakeFiles/hwLFG1.dir/lfgqueue.cpp.obj: CMakeFiles/hwLFG1.dir/flags.make
 CMakeFiles/hwLFG1.dir/lfgqueue.cpp.obj: ../lfgqueue.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\joelg\CLionProjects\hwLFG1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hwLFG1.dir/lfgqueue.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwLFG1.dir\lfgqueue.cpp.obj -c C:\Users\joelg\CLionProjects\hwLFG1\lfgqueue.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tpc345\CLionProjects\hwLFG1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hwLFG1.dir/lfgqueue.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hwLFG1.dir\lfgqueue.cpp.obj -c C:\Users\tpc345\CLionProjects\hwLFG1\lfgqueue.cpp
 
 CMakeFiles/hwLFG1.dir/lfgqueue.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hwLFG1.dir/lfgqueue.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\joelg\CLionProjects\hwLFG1\lfgqueue.cpp > CMakeFiles\hwLFG1.dir\lfgqueue.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tpc345\CLionProjects\hwLFG1\lfgqueue.cpp > CMakeFiles\hwLFG1.dir\lfgqueue.cpp.i
 
 CMakeFiles/hwLFG1.dir/lfgqueue.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hwLFG1.dir/lfgqueue.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\joelg\CLionProjects\hwLFG1\lfgqueue.cpp -o CMakeFiles\hwLFG1.dir\lfgqueue.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tpc345\CLionProjects\hwLFG1\lfgqueue.cpp -o CMakeFiles\hwLFG1.dir\lfgqueue.cpp.s
 
 # Object files for target hwLFG1
 hwLFG1_OBJECTS = \
@@ -111,7 +111,7 @@ hwLFG1.exe: CMakeFiles/hwLFG1.dir/build.make
 hwLFG1.exe: CMakeFiles/hwLFG1.dir/linklibs.rsp
 hwLFG1.exe: CMakeFiles/hwLFG1.dir/objects1.rsp
 hwLFG1.exe: CMakeFiles/hwLFG1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\joelg\CLionProjects\hwLFG1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable hwLFG1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\tpc345\CLionProjects\hwLFG1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable hwLFG1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\hwLFG1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -124,6 +124,6 @@ CMakeFiles/hwLFG1.dir/clean:
 .PHONY : CMakeFiles/hwLFG1.dir/clean
 
 CMakeFiles/hwLFG1.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\joelg\CLionProjects\hwLFG1 C:\Users\joelg\CLionProjects\hwLFG1 C:\Users\joelg\CLionProjects\hwLFG1\cmake-build-debug C:\Users\joelg\CLionProjects\hwLFG1\cmake-build-debug C:\Users\joelg\CLionProjects\hwLFG1\cmake-build-debug\CMakeFiles\hwLFG1.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\tpc345\CLionProjects\hwLFG1 C:\Users\tpc345\CLionProjects\hwLFG1 C:\Users\tpc345\CLionProjects\hwLFG1\cmake-build-debug C:\Users\tpc345\CLionProjects\hwLFG1\cmake-build-debug C:\Users\tpc345\CLionProjects\hwLFG1\cmake-build-debug\CMakeFiles\hwLFG1.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/hwLFG1.dir/depend
 
