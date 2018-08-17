@@ -10,6 +10,9 @@ The purpose of this assignment is to experiment and practice basic Computer Scie
 - Singly Linked List Data Structure.
 - Arrays.
 
+## Description
+The program is an advanced version from the previous LFG, this one involves using three linked lists each with their respective roles to insert players into their own categories, making it faster.
+
 ### Acknowledgements
 [Andrew Winslow](https://github.com/andrewwinslow) for allowing me to practice on his homework assignments, supplying main.cpp, lfgqueue.h, player.h, and player.cpp to further my studies as a Computer Engineer.
 
