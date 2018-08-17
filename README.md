@@ -7,7 +7,11 @@ Do not copy this assignment as this is for only educational purposes only and gr
 ## Assignment
 The purpose of this assignment is to practice and learn basic and advanced Computer Science and Engineering fundamentals. Such fundamentals include:
 - Object Oriented Programming
+- Strings
 - Recursion
+
+## Description
+This program simulates a hacking formula where we use recursion to guess passwords to different accounts.
 
 ### Acknowledgements
 [Andrew Winslow](https://github.com/andrewwinslow) for allowing me to practice on his homework assignments, supplying main.cpp, hack.h, evilcomputer.h, and evilcomputer.cpp to further my studies as a Computer Engineer.
