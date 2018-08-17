@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/joelg/CLionProjects/hwHIST1/browserhistory.cpp" "C:/Users/joelg/CLionProjects/hwHIST1/cmake-build-debug/CMakeFiles/hwHIST1.dir/browserhistory.cpp.obj"
-  "C:/Users/joelg/CLionProjects/hwHIST1/main.cpp" "C:/Users/joelg/CLionProjects/hwHIST1/cmake-build-debug/CMakeFiles/hwHIST1.dir/main.cpp.obj"
+  "C:/Users/tpc345/CLionProjects/hwHIST1/browserhistory.cpp" "C:/Users/tpc345/CLionProjects/hwHIST1/cmake-build-debug/CMakeFiles/hwHIST1.dir/browserhistory.cpp.obj"
+  "C:/Users/tpc345/CLionProjects/hwHIST1/main.cpp" "C:/Users/tpc345/CLionProjects/hwHIST1/cmake-build-debug/CMakeFiles/hwHIST1.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

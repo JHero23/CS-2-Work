@@ -12,6 +12,9 @@ The purpose of this assignment is to experiment and practice basic Computer Scie
 - Object Oriented Programming
 - Stacks Data Structure.
 
+### Description
+This progam simulates a browser history using the stacks data structures to simulate a user going through different urls.
+
 ### Acknowledgements
 [Andrew Winslow](https://github.com/andrewwinslow) for allowing me to practice on his homework assignments, supplying main.cpp and browserhistory.h to further my studies as a Computer Engineer.
 
