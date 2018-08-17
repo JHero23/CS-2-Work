@@ -8,7 +8,11 @@ Do not copy this assignment as this is for only educational puproses only and gr
 The purpose of this assignment is to experiment and practice basic Computer Science and Engineering fundmanetals. Such fundamentals include:
 - Object Oriented Programming.
 - Binary Search and Insertion Sort Algorithms.
+- Strings.
 - Recursion.
+
+## Description
+This program simulates an autocompleter like in our phones when we enter a letter or multiple letters, the focus is using a recursion to look for string matches.
 
 ### Acknowledgements
 [Andrew Winslow](https://github.com/andrewwinslow) for allowing me to practice on his homework assignments, supplying main.cpp, pokemon.h, pokedex.h, and pokedex.txt to further my studies as a Computer Engineer.
