@@ -1,3 +1,0 @@
-C:/Users/tpc345/CLionProjects/hwPW/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/tpc345/CLionProjects/hwPW/cmake-build-debug/CMakeFiles/hwPW.dir
-C:/Users/tpc345/CLionProjects/hwPW/cmake-build-debug/CMakeFiles/edit_cache.dir

@@ -1,3 +1,0 @@
-"C:\Users\tpc345\AppData\Roaming\JetBrains\CLion 2018.1.6\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\hwPW.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\hwPW.dir/objects.a @CMakeFiles\hwPW.dir\objects1.rsp
-C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\hwPW.dir/objects.a -Wl,--no-whole-archive  -o hwPW.exe -Wl,--out-implib,libhwPW.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\hwPW.dir\linklibs.rsp
