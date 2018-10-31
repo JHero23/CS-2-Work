@@ -1,3 +1,0 @@
-"C:\Users\tpc345\AppData\Roaming\JetBrains\CLion 2018.1.6\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\hwAC2.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\hwAC2.dir/objects.a @CMakeFiles\hwAC2.dir\objects1.rsp
-C:\MinGW\bin\g++.exe -O3 -DNDEBUG   -Wl,--whole-archive CMakeFiles\hwAC2.dir/objects.a -Wl,--no-whole-archive  -o hwAC2.exe -Wl,--out-implib,libhwAC2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\hwAC2.dir\linklibs.rsp
